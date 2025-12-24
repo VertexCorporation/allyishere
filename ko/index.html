@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ally — 건강의 미래 | Vertex</title>
+  <meta name="description" content="Ally: AI 기반 건강 추적 및 웨어러블 기술을 통해 전 세계 사망률 감소. 언제나 당신의 아군." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://allyishere.com/" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <meta property="og:site_name" content="Ally" />
+  <meta property="og:title" content="Ally — 언제나 당신의 아군" />
+  <meta property="og:description" content="능동적인 건강 모니터링으로 인류를 보호하는 임무." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://allyishere.com/" />
+  <meta property="og:image" content="../assets/cover.png" />
+
+  <link rel="icon" href="../assets/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/favicon.png" />
+  <link rel="stylesheet" href="../main.css" />
+</head>
+
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="테마 전환" title="테마 전환">
+    <div class="theme-icon" aria-hidden="true"></div>
+  </button>
+
+  <main class="page">
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="badge reveal">알파 단계</div>
+        <h1 class="reveal delay-1">Ally, 언제나 당신의 아군.</h1>
+        <p class="hero-subtitle reveal delay-2">
+          앱 그 이상. <span class="highlight">생명줄 (Lifeline)</span>.
+          우리는 언제 어디서나 당신을 보호하기 위해 세계에서 가장 진보된 건강 생태계를 구축하고 있습니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="mission-section">
+      <div class="container">
+        <div class="divider reveal" role="separator"></div>
+        <div class="mission-layout reveal">
+          <h2 class="ambition-title">
+            <span>우</span><span>리</span><span>의</span>
+            <span class="spacer"></span>
+            <span>야</span><span>망</span>
+          </h2>
+          <div class="mission-text">
+            <p class="mission-statement">
+              돌연사와 예방 가능한 질병은 매년 수백만 명의 목숨을 앗아갑니다.
+              우리는 이것을 받아들이기를 거부합니다. <br><br>
+              <strong>Ally의 임무는 간단하지만 거대합니다:</strong>
+              건강 데이터를 민주화하고, 조기 진단을 가능하게 하며,
+              <span class="text-blue">전 세계 사망률을 크게 줄이는 것입니다.</span>
+              우리는 인류 주위에 방패를 만들기 위해 소프트웨어와 하드웨어를 융합하고 있습니다.
+            </p>
+          </div>
+        </div>
+        <div class="divider reveal delay-1" role="separator"></div>
+      </div>
+    </section>
+
+    <section class="product-reveal">
+      <div class="container">
+        <div class="product-grid">
+          <div class="ring-stage reveal">
+            <div class="ring-model">
+              <div class="ring-inner"></div>
+            </div>
+            <div class="ring-shadow"></div>
+          </div>
+          <div class="product-text reveal delay-1">
+            <h3>Ally Ring <span class="proto-tag">프로토타입</span></h3>
+            <p>
+              우리는 소프트웨어와 하드웨어를 융합하고 있습니다. <br>
+              Ally Ring은 조용하고 강력하며 보이지 않도록 설계되었습니다.
+              프리미엄 미학으로 감싸인 지속적인 바이탈 추적.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <div class="container">
+        <div class="divider reveal" role="separator" aria-hidden="true"></div>
+        <h2 class="resources-title reveal">혁명에 동참하세요</h2>
+        <p class="resources-subtitle reveal">
+          우리는 현재 활발히 개발 중입니다. 변화의 일부가 되십시오.
+        </p>
+        <div class="resource-cards reveal delay-1">
+          <a class="resource-card" href="https://github.com/VertexCorporation/Ally" target="_blank"
+            rel="noopener noreferrer">
+            <div class="resource-icon"><img src="../assets/github.svg" alt="" /></div>
+            <div class="resource-content">
+              <h3>GitHub</h3>
+              <p>소스를 탐색하고, 진행 상황을 추적하고, 기여하세요.</p>
+            </div>
+          </a>
+          <a class="resource-card" href="https://play.google.com/store/apps/details?id=com.vertex.ally" target="_blank"
+            rel="noopener noreferrer">
+            <div class="resource-icon"><img src="../assets/play.svg" alt="" /></div>
+            <div class="resource-content">
+              <h3>Google Play</h3>
+              <p>Google Play에서 Ally를 다운로드하세요.</p>
+            </div>
+          </a>
+          <a class="resource-card disabled-card" href="#">
+            <div class="resource-icon"><img src="../assets/app.svg" alt="" /></div>
+            <div class="resource-content">
+              <h3>App Store</h3>
+              <p>App Store에서 Ally 다운로드 (곧 출시 예정).</p>
+            </div>
+          </a>
+          <a class="resource-card" href="https://vertexishere.com" target="_blank" rel="noopener noreferrer">
+            <div class="resource-icon"><img src="../assets/vertex.svg" alt="" /></div>
+            <div class="resource-content">
+              <h3>Vertex</h3>
+              <p>Ally의 배후에 있는 생태계인 Vertex를 발견하세요.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer reveal">
+      <p>&copy; Vertex, Ally는 Vertex의 상표입니다.</p>
+    </footer>
+  </main>
+  <script src="../main.js" defer></script>
+
+</body>
+
+</html>

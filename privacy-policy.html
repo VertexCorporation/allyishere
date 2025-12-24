@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Privacy Policy | Ally by Vertex</title>
+  <meta name="description" content="Privacy Policy for Ally. Your health data, your privacy." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/favicon.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <!-- Background particles -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Theme toggle -->
+  <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+    <div class="theme-icon" aria-hidden="true"></div>
+  </button>
+
+  <main class="page policy-page">
+
+    <!-- Content Container -->
+    <div class="container text-container reveal delay-1">
+
+      <header class="policy-header">
+        <h1>Ally Privacy Policy</h1>
+        <p class="last-updated">Last Updated: December 24, 2025</p>
+        <div class="divider"></div>
+      </header>
+
+      <!-- INTRO & ALPHA NOTICE -->
+      <section class="policy-section">
+        <p>
+          Welcome to Ally. The Ally application and related services ("Service") are provided by the independent
+          development team known as Vertex.
+          Vertex operates a global ecosystem, with its applications having been accessed by users in over 160 countries worldwide.
+          This Privacy Policy explains the
+          specific data practices for Ally
+          and supplements the general Vertex protocols.
+        </p>
+
+        <!-- ALPHA NOTICE BOX -->
+        <div class="alpha-notice">
+          <strong>Alpha Phase Notice</strong>
+          <p> Ally is currently in an active Alpha development phase. Some features
+            described in this policy (such as Premium Subscriptions or specific sensor integrations) may not yet be
+            available in your region or version. This policy covers the intended data handling for the complete feature
+            set. </p>
+        </div>
+
+        <p>
+          By using Ally, you acknowledge the practices described below. An account created for Ally is a unified
+          <strong>Vertex Account</strong>,
+          usable across our entire ecosystem of apps and games.
+        </p>
+      </section>
+
+      <!-- SECTION 1: HEALTH DATA (LOCAL FIRST) -->
+      <section class="policy-section highlight-section">
+        <h2>1. The "Local-First" Health Guarantee</h2>
+        <p>
+          Ally is built on a fundamental belief: <strong>Your health data belongs to you.</strong>
+        </p>
+
+        <div class="feature-block">
+          <h3>Processing & Storage</h3>
+          <p>
+            Unlike many health applications, Ally operates on a <strong>Local-First architecture</strong>.
+            Your raw biometric data—including pedometer steps, heart rate logs, sleep analysis, and activity
+            recognition—is processed
+            and stored directly on your device's internal storage.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h3>No Cloud Uploads for Vitals</h3>
+          <p>
+            Currently, <strong>we do not upload your raw health metrics to our servers.</strong>
+            The sensitive data collected by your phone's sensors or the Ally Ring stays in your pocket, not in a cloud
+            database.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 2: DATA WE COLLECT (SERVER SIDE) -->
+      <section class="policy-section">
+        <h2>2. Information We Collect (Server-Side)</h2>
+        <p>
+          While your health data remains local, we collect specific information to manage your account, ensuring the
+          stability of the app,
+          and providing subscription services (when available).
+        </p>
+
+        <h3>A) Vertex Account Information</h3>
+        <p>To create your unified account, we collect:</p>
+        <ul>
+          <li><strong>Direct Input:</strong> Your username, email address, and a securely hashed password.</li>
+          <li><strong>Third-Party Login:</strong> If you use Google Sign-In, we receive your email and profile ID to
+            authenticate you. This interaction is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+        </ul>
+
+        <h3>B) Technical & Device Information (Analytics)</h3>
+        <p>
+          To ensure our service runs securely and to fix bugs before they affect your health tracking, we or our
+          partners (like <strong>Google Firebase</strong> and <strong>Crashlytics</strong>)
+          automatically collect technical telemetry.
+        </p>
+        <p>
+           Please review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> to understand how these tools handle technical data. This includes:
+        </p>
+        <ul>
+          <li>Device model, operating system version, and IP address.</li>
+          <li>Crash reports (e.g., "The app froze on the Settings screen").</li>
+          <li>Performance metrics (e.g., "App launch time").</li>
+        </ul>
+        <p>
+          <strong>Crucial Distinction:</strong> This data is pseudonymous and is used strictly for technical stability.
+          It is <strong>never</strong> linked to your local health database (e.g., we can see <em>that</em> the app
+          crashed, but we cannot see <em>what</em> your heart rate was).
+        </p>
+
+        <h3>C) Subscription & Payment Data</h3>
+        <p>
+          If you subscribe to Ally Premium, financial transactions are processed directly by the <strong>Google Play
+            Store</strong>.
+          We do not collect or store your credit card details. We only receive a transaction ID and validity token to
+          activate your premium features. These transactions are subject to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+        </p>
+      </section>
+
+      <!-- SECTION 3: PERMISSIONS -->
+      <section class="policy-section">
+        <h2>3. Android Permissions & Sensors</h2>
+        <p>
+          To function as a "Lifeline," Ally requires specific permissions. Granting these permissions allows the app to
+          function locally;
+          it does not authorize us to upload this data.
+        </p>
+        <ul>
+          <li><strong>Activity Recognition:</strong> Used to detect if you are walking, running, or sleeping.</li>
+          <li><strong>Body Sensors:</strong> Used to access heart rate data from the device or connected wearables.</li>
+          <li><strong>Notification Access:</strong> Used solely to provide real-time health alerts.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 4: FUTURE PROOFING -->
+      <section class="policy-section">
+        <h2>4. Future Features & Opt-In</h2>
+        <p>
+          In the future, we may develop advanced tools or cloud backup solutions.
+        </p>
+        <p>
+          <strong>Our Promise:</strong> Should cloud-based health features become available, they will be strictly
+          <strong>Opt-In</strong>.
+          We will never change the architecture to upload your historical health data without asking for your explicit
+          permission first.
+        </p>
+      </section>
+
+      <!-- SECTION 5: SECURITY & LIABILITY -->
+      <section class="policy-section">
+        <h2>5. Security & Limitation of Liability</h2>
+        <p>
+          Vertex integrates with essential third-party services to function, including <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Firebase</a> (for
+          authentication/hosting) and <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare</a> (for network security).
+          We select our partners carefully and implement industry-standard security measures.
+        </p>
+        <p>
+          However, you acknowledge that using services that rely on a chain of providers carries inherent risks.
+          While we strive for perfection, we cannot guarantee absolute security against all potential cyber threats.
+          The ultimate responsibility for data security within a third-party's platform lies with that provider.
+        </p>
+      </section>
+
+      <!-- SECTION 6: RIGHTS -->
+      <section class="policy-section">
+        <h2>6. Your Rights & Data Control</h2>
+        <ul>
+          <li><strong>Local Data:</strong> You can clear your health data at any time by clearing the app's storage in
+            your phone settings or uninstalling the app. This permanently destroys the local database.</li>
+          <li><strong>Account Deletion:</strong> You have the right to permanently delete your Vertex Account and all
+            associated cloud data. You can initiate this process at <a href="https://vertexishere.com/delete-data"
+              target="_blank">vertexishere.com/delete-data</a>.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 7: CHILDREN -->
+      <section class="policy-section">
+        <h2>7. Children's Privacy</h2>
+        <p>
+          Our services are not directed to or intended for use by individuals under the age of 13.
+          We do not knowingly collect personal information from children under 13.
+        </p>
+      </section>
+
+      <!-- MEDICAL DISCLAIMER -->
+      <div class="disclaimer-box">
+        <strong>IMPORTANT: Not a Medical Device</strong>
+        <p>
+          Ally is a software tool for informational and fitness tracking purposes only. It is not a substitute for
+          professional medical advice, diagnosis, or treatment.
+          Always seek the advice of your physician regarding any medical condition. In an emergency, call your local
+          emergency services immediately.
+        </p>
+      </div>
+
+      <!-- CONTACT -->
+      <section class="policy-section">
+        <h2>8. Contact Us</h2>
+        <p>
+          For any questions about this policy or the Vertex ecosystem:
+          <br><br>
+          Email: <a href="mailto:contact@vertexishere.com">contact@vertexishere.com</a><br>
+          Website: vertexishere.com
+        </p>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; Vertex, Ally is a trademark of Vertex.</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+
+</html>
