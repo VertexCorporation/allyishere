@@ -1,45 +1,59 @@
 <!doctype html>
-<html lang="de" data-theme="dark">
+<html lang="ar" dir="rtl" data-theme="dark">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ally — Die Zukunft der Gesundheit | Vertex</title>
+
+  <!-- SEO -->
+  <title>Ally - مستقبل الصحة | Vertex</title>
   <meta name="description"
-    content="Ally: Senkung der globalen Sterblichkeitsraten durch KI-gesteuertes Gesundheitstracking und Wearable-Technologie. Immer dein Verbündeter." />
+    content="Ally: تقليل معدلات الوفيات العالمية من خلال التتبع الصحي المدعوم بالذكاء الاصطناعي." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://allyishere.com/" />
-  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="canonical" href="https://allyishere.com/ar/" />
 
   <meta property="og:site_name" content="Ally" />
-  <meta property="og:title" content="Ally — Immer dein Verbündeter" />
-  <meta property="og:description"
-    content="Eine Mission zum Schutz der Menschheit durch proaktive Gesundheitsüberwachung." />
+  <meta property="og:title" content="Ally - حليفك دائماً" />
+  <meta property="og:description" content="مهمة لحماية البشرية من خلال المراقبة الصحية الاستباقية." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://allyishere.com/" />
-  <meta property="og:image" content="../assets/cover.png" />
+  <meta property="og:url" content="https://allyishere.com/ar/" />
+  <meta property="og:image" content="https://allyishere.com/assets/cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://allyishere.com/assets/cover.png">
 
+  <meta name="theme-color" content="#0a0a0a" />
   <link rel="icon" href="../assets/favicon.png" />
   <link rel="apple-touch-icon" href="../assets/favicon.png" />
   <link rel="stylesheet" href="../main.css" />
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+    }
+  </style>
 </head>
 
 <body>
   <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
-  <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Design wechseln" title="Design wechseln">
+  <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle theme">
     <div class="theme-icon" aria-hidden="true"></div>
   </button>
 
   <main class="page">
+
     <section class="hero" aria-label="Hero">
       <div class="hero-bg-glow" aria-hidden="true"></div>
+
       <div class="container">
-        <div class="badge reveal">Alpha-Phase</div>
-        <h1 class="reveal delay-1">Ally, immer dein Verbündeter.</h1>
+        <div class="badge reveal">مرحلة ألفا</div>
+
+        <h1 class="reveal delay-1">Ally، حليفك دائماً.</h1>
+
         <p class="hero-subtitle reveal delay-2">
-          Mehr als eine App. Eine <span class="highlight">Lebensader</span>.
-          Wir bauen das fortschrittlichste Gesundheitsökosystem der Welt, um dich überall und jederzeit zu schützen.
+          أكثر من مجرد تطبيق. إنه <span class="highlight">شريان حياة</span>.
+          نحن نبني النظام البيئي الصحي الأكثر تقدماً في العالم لحمايتك في كل مكان وزمان.
         </p>
       </div>
     </section>
@@ -47,23 +61,21 @@
     <section class="mission-section">
       <div class="container">
         <div class="divider reveal" role="separator"></div>
+
         <div class="mission-layout reveal">
-          <h2 class="ambition-title">
-            <span>U</span><span>N</span><span>S</span><span>E</span><span>R</span><span>E</span>
-            <span class="spacer"></span>
-            <span>A</span><span>M</span><span>B</span><span>I</span><span>T</span><span>I</span><span>O</span><span>N</span>
-          </h2>
+          <h2 class="ambition-title">طموحنا</h2>
+
           <div class="mission-text">
             <p class="mission-statement">
-              Plötzliche Todesfälle und vermeidbare Krankheiten fordern jährlich Millionen von Leben.
-              Wir weigern uns, dies zu akzeptieren. <br><br>
-              <strong>Die Mission von Ally ist einfach, aber gewaltig:</strong>
-              Gesundheitsdaten zu demokratisieren, Früherkennung zu ermöglichen und die
-              <span class="text-blue">globalen Sterblichkeitsraten signifikant zu senken.</span>
-              Wir verschmelzen Software mit Hardware, um einen Schutzschild um die Menschheit zu errichten.
+              تحصد الوفيات المفاجئة والحالات التي يمكن الوقاية منها ملايين الأرواح سنوياً.
+              نحن نرفض قبول ذلك. <br><br>
+              <strong>مهمة Ally بسيطة ولكنها ضخمة:</strong>
+              ديمقراطية البيانات الصحية، وتمكين التشخيص المبكر، و
+              <span class="text-blue">تقليل معدلات الوفيات العالمية بشكل كبير.</span>
             </p>
           </div>
         </div>
+
         <div class="divider reveal delay-1" role="separator"></div>
       </div>
     </section>
@@ -71,20 +83,23 @@
     <section class="product-reveal">
       <div class="container">
         <div class="product-grid">
+
           <div class="ring-stage reveal">
             <div class="ring-model">
               <div class="ring-inner"></div>
             </div>
             <div class="ring-shadow"></div>
           </div>
+
           <div class="product-text reveal delay-1">
-            <h3>Ally Ring <span class="proto-tag">PROTOTYP</span></h3>
+            <h3>خاتم Ally <span class="proto-tag">نموذج أولي</span></h3>
             <p>
-              Wir verschmelzen Software mit Hardware. <br>
-              Der Ally Ring wurde entwickelt, um lautlos, leistungsstark und unsichtbar zu sein.
-              Kontinuierliches Tracking der Vitalwerte in einer Premium-Ästhetik.
+              نحن ندمج البرمجيات مع الأجهزة. <br>
+              تم تصميم خاتم Ally ليكون صامتاً وقوياً وغير مرئي.
+              تتبع حيوي مستمر مغلف بجماليات متميزة.
             </p>
           </div>
+
         </div>
       </div>
     </section>
@@ -92,49 +107,59 @@
     <section class="links-section">
       <div class="container">
         <div class="divider reveal" role="separator" aria-hidden="true"></div>
-        <h2 class="resources-title reveal">Schließe dich der Revolution an</h2>
+
+        <h2 class="resources-title reveal">انضم إلى الثورة</h2>
         <p class="resources-subtitle reveal">
-          Wir befinden uns derzeit in der aktiven Entwicklung. Sei Teil des Wandels.
+          نحن حالياً في مرحلة التطوير النشط. كن جزءاً من التغيير.
         </p>
+
         <div class="resource-cards reveal delay-1">
+
           <a class="resource-card" href="https://github.com/VertexCorporation/Ally" target="_blank"
             rel="noopener noreferrer">
             <div class="resource-icon"><img src="../assets/github.svg" alt="" /></div>
             <div class="resource-content">
               <h3>GitHub</h3>
-              <p>Erkunde den Code, verfolge den Fortschritt und trage bei.</p>
+              <p>استكشف الكود وتابع التقدم.</p>
             </div>
           </a>
+
           <a class="resource-card" href="https://play.google.com/store/apps/details?id=com.vertex.ally" target="_blank"
             rel="noopener noreferrer">
             <div class="resource-icon"><img src="../assets/play.svg" alt="" /></div>
             <div class="resource-content">
               <h3>Google Play</h3>
-              <p>Lade Ally bei Google Play herunter.</p>
+              <p>حمل Ally من Google Play.</p>
             </div>
           </a>
-          <a class="resource-card disabled-card" href="#">
+
+          <a class="resource-card" href="https://apps.apple.com/app/id6756227081" target="_blank"
+            rel="noopener noreferrer">
             <div class="resource-icon"><img src="../assets/app.svg" alt="" /></div>
             <div class="resource-content">
               <h3>App Store</h3>
-              <p>Ally im App Store (Demnächst).</p>
+              <p>حمل Ally من App Store.</p>
             </div>
           </a>
+
           <a class="resource-card" href="https://vertexishere.com" target="_blank" rel="noopener noreferrer">
             <div class="resource-icon"><img src="../assets/vertex.svg" alt="" /></div>
             <div class="resource-content">
               <h3>Vertex</h3>
-              <p>Entdecke Vertex, das Ökosystem hinter Ally.</p>
+              <p>اكتشف Vertex، النظام البيئي خلف Ally.</p>
             </div>
           </a>
+
         </div>
       </div>
     </section>
 
     <footer class="footer reveal">
-      <p>&copy; Vertex, Ally ist eine Marke von Vertex.</p>
+      <p>&copy; Vertex، Ally هي علامة تجارية لشركة Vertex.</p>
     </footer>
+
   </main>
+
   <script src="../main.js" defer></script>
 </body>
 

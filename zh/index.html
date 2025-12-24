@@ -1,80 +1,154 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="dark">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ally — 健康的未来 | Vertex</title>
-  <meta name="description" content="Ally：通过人工智能驱动的健康追踪和可穿戴技术降低全球死亡率。永远是你的盟友。" />
+
+  <title>Ally - 健康的未来 | Vertex</title>
+  <meta name="description" content="Ally: 通过人工智能驱动的健康追踪，降低全球死亡率。" />
+  <link rel="canonical" href="https://allyishere.com/zh/" />
+
+  <meta property="og:site_name" content="Ally" />
+  <meta property="og:title" content="Ally - 永远是你的盟友" />
+  <meta property="og:url" content="https://allyishere.com/zh/" />
+  <meta property="og:image" content="https://allyishere.com/assets/cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://allyishere.com/assets/cover.png">
+
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" href="../assets/favicon.png" />
   <link rel="stylesheet" href="../main.css" />
 </head>
+
 <body>
-  <canvas id="particle-canvas"></canvas>
-  <button class="theme-toggle-btn" id="themeToggle"></button>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+    <div class="theme-icon" aria-hidden="true"></div>
+  </button>
+
   <main class="page">
-    <section class="hero">
-      <div class="hero-bg-glow"></div>
+
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+
       <div class="container">
         <div class="badge reveal">Alpha 阶段</div>
+
         <h1 class="reveal delay-1">Ally，永远是你的盟友。</h1>
+
         <p class="hero-subtitle reveal delay-2">
-          不仅仅是一个应用程序。它是<span class="highlight">生命线</span>。
+          不仅仅是一个应用程序。一条<span class="highlight">生命线</span>。
           我们正在构建世界上最先进的健康生态系统，随时随地为您提供保护。
         </p>
       </div>
     </section>
+
     <section class="mission-section">
       <div class="container">
-        <div class="divider reveal"></div>
+        <div class="divider reveal" role="separator"></div>
+
         <div class="mission-layout reveal">
           <h2 class="ambition-title">我们的抱负</h2>
+
           <div class="mission-text">
             <p class="mission-statement">
-              突发死亡和可预防的疾病每年夺去数百万人的生命。
-              我们拒绝接受这一点。<br><br>
-              <strong>Ally 的使命简单而宏大：</strong> 
-              使健康数据民主化，实现早期诊断，并显著
+              突发死亡和可预防的疾病每年夺去数百万人的生命。我们拒绝接受这一点。<br><br>
+              <strong>Ally 的使命既简单又宏大：</strong>
+              普及健康数据，实现早期诊断，并显著
               <span class="text-blue">降低全球死亡率。</span>
-              我们将软件与硬件融合，为人类打造一面盾牌。
             </p>
           </div>
         </div>
-        <div class="divider reveal delay-1"></div>
+
+        <div class="divider reveal delay-1" role="separator"></div>
       </div>
     </section>
-    <!-- Ring Section -->
+
     <section class="product-reveal">
       <div class="container">
         <div class="product-grid">
-            <div class="ring-stage reveal"><div class="ring-model"><div class="ring-inner"></div></div></div>
-            <div class="product-text reveal delay-1">
-            <h3>Ally 智能戒指 <span class="proto-tag">原型机</span></h3>
+
+          <div class="ring-stage reveal">
+            <div class="ring-model">
+              <div class="ring-inner"></div>
+            </div>
+            <div class="ring-shadow"></div>
+          </div>
+
+          <div class="product-text reveal delay-1">
+            <h3>Ally 戒指 <span class="proto-tag">原型</span></h3>
             <p>
               我们将软件与硬件融合。<br>
-              Ally 戒指设计静音、强大且隐形。
-              包裹在高级美学中的连续生命体征追踪。
+              Ally 戒指设计为静音、强大且隐形。
+              结合高端美学的持续生命体征追踪。
             </p>
           </div>
+
         </div>
       </div>
     </section>
-    <!-- Links Section -->
+
     <section class="links-section">
       <div class="container">
-        <div class="divider reveal"></div>
+        <div class="divider reveal" role="separator" aria-hidden="true"></div>
+
         <h2 class="resources-title reveal">加入革命</h2>
-        <p class="resources-subtitle reveal">我们目前正处于积极开发阶段。成为变革的一部分。</p>
+        <p class="resources-subtitle reveal">
+          我们目前正处于积极开发阶段。成为变革的一部分。
+        </p>
+
         <div class="resource-cards reveal delay-1">
-          <a class="resource-card" href="https://github.com/VertexCorporation/Ally" target="_blank">
-            <div class="resource-content"><h3>GitHub</h3><p>探索源代码，跟踪进度并做出贡献。</p></div>
+
+          <a class="resource-card" href="https://github.com/VertexCorporation/Ally" target="_blank"
+            rel="noopener noreferrer">
+            <div class="resource-icon"><img src="../assets/github.svg" alt="" /></div>
+            <div class="resource-content">
+              <h3>GitHub</h3>
+              <p>探索源代码。</p>
+            </div>
           </a>
-          <a class="resource-card" href="https://vertexishere.com" target="_blank">
-            <div class="resource-content"><h3>Vertex</h3><p>探索 Ally 背后的生态系统 Vertex。</p></div>
+
+          <a class="resource-card" href="https://play.google.com/store/apps/details?id=com.vertex.ally" target="_blank"
+            rel="noopener noreferrer">
+            <div class="resource-icon"><img src="../assets/play.svg" alt="" /></div>
+            <div class="resource-content">
+              <h3>Google Play</h3>
+              <p>在 Google Play 上下载。</p>
+            </div>
           </a>
+
+          <a class="resource-card" href="https://apps.apple.com/app/id6756227081" target="_blank"
+            rel="noopener noreferrer">
+            <div class="resource-icon"><img src="../assets/app.svg" alt="" /></div>
+            <div class="resource-content">
+              <h3>App Store</h3>
+              <p>在 App Store 上下载。</p>
+            </div>
+          </a>
+
+          <a class="resource-card" href="https://vertexishere.com" target="_blank" rel="noopener noreferrer">
+            <div class="resource-icon"><img src="../assets/vertex.svg" alt="" /></div>
+            <div class="resource-content">
+              <h3>Vertex</h3>
+              <p>探索 Vertex 生态系统。</p>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
-    <footer class="footer reveal"><p>&copy; Vertex, Ally 是 Vertex 的商标。</p></footer>
+
+    <footer class="footer reveal">
+      <p>&copy; Vertex, Ally 是 Vertex 的商标。</p>
+    </footer>
+
   </main>
+
   <script src="../main.js" defer></script>
 </body>
+
 </html>

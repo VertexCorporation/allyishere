@@ -6,13 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO -->
-  <title>Ally — The Future of Health | Vertex</title>
+  <title>Ally - The Future of Health | Vertex</title>
   <meta name="description"
     content="Ally: Reducing global mortality rates through AI-driven health tracking and wearable technology. Always your ally." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://allyishere.com/" />
 
-  <!-- Hreflang Tags-->
+  <!-- Social Media & WhatsApp Preview (Fixed) -->
+  <meta property="og:site_name" content="Ally" />
+  <meta property="og:title" content="Ally - Always your ally" />
+  <meta property="og:description" content="A mission to protect humanity with proactive health monitoring." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://allyishere.com/" />
+  <meta property="og:image" content="https://allyishere.com/assets/cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://allyishere.com/assets/cover.png">
+
+  <!-- Hreflang Tags -->
   <link rel="alternate" hreflang="az" href="https://allyishere.com/az/" />
   <link rel="alternate" hreflang="de" href="https://allyishere.com/de/" />
   <link rel="alternate" hreflang="en" href="https://allyishere.com/en/" />
@@ -33,14 +45,6 @@
 
   <!-- Theme Color -->
   <meta name="theme-color" content="#0a0a0a" />
-
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="Ally" />
-  <meta property="og:title" content="Ally — Always your ally" />
-  <meta property="og:description" content="A mission to protect humanity with proactive health monitoring." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://allyishere.com/" />
-  <meta property="og:image" content="assets/cover.png" />
 
   <!-- Favicons -->
   <link rel="icon" href="assets/favicon.png" />
@@ -166,11 +170,11 @@
             </div>
           </a>
 
-          <a class="resource-card disabled-card" href="#">
+          <a class="resource-card" href="https://apps.apple.com/app/id6756227081" target="_blank" rel="noopener noreferrer">
             <div class="resource-icon"><img src="assets/app.svg" alt="" /></div>
             <div class="resource-content">
               <h3>App Store</h3>
-              <p>Download Ally on the App Store (Coming Soon).</p>
+              <p>Download Ally on the App Store.</p>
             </div>
           </a>
 
@@ -195,53 +199,42 @@
   <!-- INTELLIGENT ROUTER SCRIPT -->
   <script>
     (function () {
+      // 0. Safety Check: If we are NOT at the root (e.g. we are already at /en/ or /tr/), STOP!
+      // This prevents infinite loops.
+      if (window.location.pathname.length > 1 && window.location.pathname !== "/index.html") {
+        return;
+      }
+
       // 1. Controls: Disable auto-redirect if ?noredirect=1 exists or user locked language
       const params = new URLSearchParams(location.search);
       if (params.has("noredirect") || localStorage.getItem("ally_lang_lock") === "1") return;
 
-      // 2. If user explicitly selected a language before (saved in localStorage), respect it
-      const storedLang = localStorage.getItem("ally_language");
-      if (storedLang) {
-        // If we are already on root and stored lang is NOT 'en', redirect.
-        // If stored is 'en', we are already here, so no redirect needed.
-        if (storedLang !== "en") {
-          location.replace("/" + storedLang + "/");
-        }
-        return;
-      }
-
-      // 3. Supported language folders list
+      // 2. Check LocalStorage preference
       const supported = new Set([
         "az", "de", "en", "es", "fr", "hi", "id", "it", "ja", "ko", "ku", "nl", "pt", "ru", "tr", "zh"
       ]);
 
-      // 4. Detect Browser Language
       function pickLang() {
-        // Check navigator.languages (modern browsers) or navigator.language
-        const langs = Array.isArray(navigator.languages) ? navigator.languages : [navigator.language].filter(Boolean);
+        const stored = localStorage.getItem("ally_language");
+        if (stored && supported.has(stored)) return stored;
 
+        const langs = Array.isArray(navigator.languages) ? navigator.languages : [navigator.language];
         for (const l of langs) {
-          const base = String(l).toLowerCase().split("-")[0]; // en-US -> en
-          if (supported.has(base)) return base;
+            if (!l) continue;
+            const base = String(l).toLowerCase().split("-")[0]; 
+            if (supported.has(base)) return base;
         }
-
-        // Fallback to English if no match found
-        return "en";
+        return "en"; // Default fallback
       }
 
       const target = pickLang();
-
-      // 5. Save and Redirect
-      // We save this so next time it's faster
       localStorage.setItem("ally_language", target);
 
-      // Delay redirect slightly for smoother UX (avoids flicker for bots/crawlers)
-      setTimeout(() => {
-        // Only redirect if target is NOT English (since this page is English)
-        if (target !== "en") {
-          location.replace("/" + target + "/");
-        }
-      }, 50);
+      // 3. Redirect logic
+      // We are at root, so we MUST redirect to the target language folder.
+      const destination = "/" + target + "/";
+      console.log("Redirecting to:", destination);
+      window.location.replace(destination);
     })();
   </script>
 
