@@ -474,6 +474,11 @@
 
   /* ---------- hero title: slide up from bottom on page load ---------- */
   .story-title {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    line-height: .98;
     perspective: 600px;
   }
 
