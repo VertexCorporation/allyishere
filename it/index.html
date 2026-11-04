@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="it" data-theme="light">
+<html lang="it" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ally - Il Futuro della Salute | Vertex</title>
 <meta name="description" content="Ally: Riduce i tassi di mortalità globale attraverso il monitoraggio della salute basato sull'intelligenza artificiale e la tecnologia indossabile. Sempre al tuo fianco.">
-<meta name="theme-color" content="#fafafa">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafaf7">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0c">
 
 <meta property="og:title" content="Ally - Sempre al tuo fianco">
 <meta property="og:description" content="La missione di proteggere l'umanità attraverso il monitoraggio proattivo della salute.">
@@ -15,424 +16,54 @@
 <meta property="og:site_name" content="Ally">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://allyishere.com/assets/cover.png">
+  <link rel="canonical" href="https://allyishere.com/it/">
+  <meta property="og:locale" content="it_IT">
+  <link rel="alternate" hreflang="ar" href="https://allyishere.com/ar/">
+  <link rel="alternate" hreflang="az" href="https://allyishere.com/az/">
+  <link rel="alternate" hreflang="de" href="https://allyishere.com/de/">
+  <link rel="alternate" hreflang="en" href="https://allyishere.com/en/">
+  <link rel="alternate" hreflang="es" href="https://allyishere.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://allyishere.com/fr/">
+  <link rel="alternate" hreflang="hi" href="https://allyishere.com/hi/">
+  <link rel="alternate" hreflang="id" href="https://allyishere.com/id/">
+  <link rel="alternate" hreflang="it" href="https://allyishere.com/it/">
+  <link rel="alternate" hreflang="ja" href="https://allyishere.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://allyishere.com/ko/">
+  <link rel="alternate" hreflang="ku" href="https://allyishere.com/ku/">
+  <link rel="alternate" hreflang="nl" href="https://allyishere.com/nl/">
+  <link rel="alternate" hreflang="pt" href="https://allyishere.com/pt/">
+  <link rel="alternate" hreflang="ru" href="https://allyishere.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://allyishere.com/tr/">
+  <link rel="alternate" hreflang="zh" href="https://allyishere.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://allyishere.com/en/">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Ubuntu:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
-<style>
-  :root{
-    --bg:#fafafa;
-    --surface:#ffffff;
-    --surface-2:#f4f4f4;
-    --ink:#141310;
-    --ink-soft:#6b675c;
-    --ink-faint:#a29d8e;
-    --border:rgba(20,19,16,.14);
-    --border-strong:rgba(20,19,16,.28);
-    --accent:#5b52e0;
-    --radius:14px;
-    --maxw:1180px;
-    --nav-h:64px;
-  }
-  html[data-theme="dark"]{
-    --bg:#0d0d0c;
-    --surface:#161513;
-    --surface-2:#1b1a17;
-    --ink:#f4f2ec;
-    --ink-soft:#a8a49a;
-    --ink-faint:#736f64;
-    --border:rgba(244,242,236,.14);
-    --border-strong:rgba(244,242,236,.26);
-    --accent:#8b83ff;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important;}
-  }
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Inter',system-ui,-apple-system,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.6;
-    overflow-x:hidden;
-    transition:background .3s ease, color .3s ease;
-  }
-
-  h1,h2,h3,h4{
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:600;
-    line-height:1.15;
-    margin:0;
-    letter-spacing:-0.01em;
-  }
-  .display{
-    font-family:'Anton',sans-serif;
-    font-weight:400;
-    text-transform:uppercase;
-    letter-spacing:.01em;
-    line-height:.98;
-  }
-
-  a{color:inherit; text-decoration:none;}
-  img{max-width:100%; display:block;}
-  ul{margin:0; padding:0; list-style:none;}
-  button{font-family:inherit;}
-
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
-  section{position:relative;}
-
-  ::selection{background:var(--ink); color:var(--bg);}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
-
-  /* ---------- navbar ---------- */
-  header.nav{
-    position:fixed; top:0; left:0; right:0; z-index:100;
-    height:var(--nav-h);
-    display:flex; align-items:center;
-    background:rgba(243,238,225,.0);
-    border-bottom:1px solid transparent;
-    transition:background .3s ease, border-color .3s ease, backdrop-filter .3s ease;
-  }
-  html[data-theme="dark"] header.nav{background:rgba(13,13,12,0);}
-  header.nav.scrolled{
-    background:color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--border);
-  }
-  .nav-inner{
-    width:100%; max-width:var(--maxw); margin:0 auto; padding:0 24px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .brand{display:flex; align-items:center; gap:9px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.2rem;}
-  .brand svg{width:24px; height:24px;}
-  .nav-links{display:flex; align-items:center; gap:30px;}
-  .nav-links a{font-size:.94rem; color:var(--ink); font-weight:500;}
-  .nav-links a:hover{color:var(--ink-soft);}
-
-  .nav-right{display:flex; align-items:center; gap:10px;}
-  .nav-right .btn {
-    padding: 8px 16px;
-    font-size: 0.82rem;
-    height: 36px;
-  }
-
-  /* ---------- language dropdown ---------- */
-  .lang-wrap{position:relative;}
-  .lang-btn{
-    display:flex; align-items:center; gap:6px;
-    border:1px solid var(--border-strong); border-radius:999px; padding:8px 14px;
-    background:var(--surface); color:var(--ink); font-size:.82rem; font-weight:600; cursor:pointer;
-    height:36px;
-  }
-  .lang-btn svg{width:15px; height:15px;}
-  .lang-btn .chev{width:10px; height:10px; transition:transform .2s ease;}
-  .lang-wrap.open .chev{transform:rotate(180deg);}
-  
-  .lang-menu{
-    position:absolute; top:calc(100% + 8px); right:0;
-    min-width:160px; max-height:280px; overflow-y:auto; 
-    background:var(--surface); border:1px solid var(--border); border-radius:10px;
-    padding:6px; display:none; flex-direction:column; gap:2px;
-    box-shadow:0 12px 28px rgba(0,0,0,.12);
-  }
-  .lang-menu::-webkit-scrollbar { width: 5px; }
-  .lang-menu::-webkit-scrollbar-track { background: transparent; }
-  .lang-menu::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 10px; }
-  
-  .lang-wrap.open .lang-menu{display:flex;}
-  .lang-menu a{
-    display:flex; justify-content:space-between; align-items:center;
-    text-align:left; background:none; border:none; padding:8px 12px; border-radius:6px;
-    font-size:.85rem; color:var(--ink); cursor:pointer;
-  }
-  .lang-menu a:hover{background:var(--surface-2);}
-  .lang-menu a.active{font-weight:700;}
-  .lang-menu a.active::after {
-    content: "✓";
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 1rem;
-  }
-
-  /* ---------- theme toggle ---------- */
-  .theme-btn{
-    width:36px; height:36px; border-radius:50%;
-    border:1px solid var(--border-strong); background:var(--surface); color:var(--ink);
-    display:flex; align-items:center; justify-content:center; cursor:pointer;
-  }
-  .theme-btn svg{width:16px; height:16px;}
-
-  .btn{
-    display:inline-flex; align-items:center; justify-content:center; gap:9px;
-    padding:12px 22px; border-radius:999px; font-weight:700; font-size:.88rem;
-    border:1.5px solid var(--ink); cursor:pointer; white-space:nowrap;
-    transition:transform .18s ease, opacity .18s ease;
-  }
-  .btn-solid{background:var(--ink); color:var(--bg);}
-  .btn-solid:hover{transform:translateY(-2px); opacity:.85;}
-  .btn-outline{background:transparent; color:var(--ink);}
-  .btn-outline:hover{transform:translateY(-2px); background:var(--surface-2);}
-  .btn svg{width:16px; height:16px; flex-shrink:0;}
-  .btn .stack{display:flex; flex-direction:column; align-items:flex-start; line-height:1.15;}
-  .btn .stack .top{font-size:.62rem; font-weight:500; text-transform:uppercase; letter-spacing:.04em; opacity:.75;}
-  .btn .stack .bot{font-size:.92rem; font-weight:700;}
-
-  .hamburger{display:none; background:none; border:none; color:var(--ink); cursor:pointer; padding:6px;}
-  .hamburger svg{width:24px; height:24px;}
-
-  .mobile-menu{
-    position:fixed; inset:var(--nav-h) 0 0 0; z-index:99;
-    background:var(--bg);
-    display:flex; flex-direction:column; gap:4px; padding:24px;
-    transform:translateY(-12px); opacity:0; pointer-events:none;
-    transition:opacity .25s ease, transform .25s ease;
-  }
-  .mobile-menu.open{opacity:1; transform:translateY(0); pointer-events:auto;}
-  .mobile-menu a{padding:15px 4px; font-size:1.1rem; border-bottom:1px solid var(--border); color:var(--ink);}
-  .mobile-menu .btn{margin-top:18px; width:fit-content;}
-
-  /* ---------- hero ---------- */
-  .hero{padding:calc(var(--nav-h) + 90px) 0 70px; text-align:center;}
-  .badge{
-    display:inline-flex; align-items:center; gap:9px;
-    padding:8px 15px; border-radius:999px; border:1px solid var(--border-strong);
-    background:var(--surface);
-    font-size:.8rem; color:var(--ink-soft); margin-bottom:30px;
-  }
-  .badge .dot{width:7px; height:7px; border-radius:50%; background:var(--ink); animation:pulseDot 1.8s ease-in-out infinite;}
-  @keyframes pulseDot{0%,100%{opacity:1;}50%{opacity:.25;}}
-
-  .hero h1{
-    font-size:clamp(2.6rem, 7vw, 5.2rem);
-    max-width:900px; margin:0 auto 24px;
-    color:var(--ink);
-  }
-  .hero p.lead{max-width:560px; margin:0 auto 38px; color:var(--ink-soft); font-size:1.08rem;}
-  .hero-ctas{display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-bottom:60px;}
-
-  .stats{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
-    max-width:960px; margin:0 auto;
-  }
-  .stat{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:26px 14px; text-align:center;}
-  .stat .num{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.55rem; color:var(--ink);}
-  .stat .label{font-size:.78rem; color:var(--ink-soft); margin-top:6px;}
-
-  /* ---------- built with ---------- */
-  .builtwith{padding:70px 0 30px;}
-  .builtwith-label{
-    text-align:center; color:var(--ink-faint); font-size:.95rem; margin-bottom:32px;
-  }
-  .builtwith-logos{
-    display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
-    gap:48px;
-    max-width:920px; margin:0 auto;
-  }
-  .builtwith-logos img{
-    height:20px; width:auto; transition: opacity .3s ease;
-    filter: grayscale(100%) contrast(1.2) brightness(0.4);
-    opacity: .5;
-  }
-  .builtwith-logos img:hover { 
-    opacity: .9; 
-  }
-  html[data-theme="dark"] .builtwith-logos img { 
-    filter: grayscale(100%) invert(1) brightness(1.5); 
-    opacity: .6; 
-  }
-  html[data-theme="dark"] .builtwith-logos img:hover { 
-    opacity: 1; 
-  }
-
-  /* ---------- reveal ---------- */
-  .reveal{opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in{opacity:1; transform:translateY(0);}
-
-  /* ---------- section shell ---------- */
-  .section{padding:96px 0;}
-  .section-head{max-width:640px; margin:0 0 48px;}
-  .section-head.center{margin:0 auto 48px; text-align:center;}
-  .eyebrow{font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-faint); margin-bottom:12px; display:block;}
-  .eyebrow.accent{color:var(--accent);}
-  .section-head h2{font-size:clamp(1.8rem, 3.4vw, 2.5rem); margin-bottom:14px;}
-  .section-head p{color:var(--ink-soft); font-size:1rem;}
-
-  /* ---------- ambition ---------- */
-  .ambition-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:start;}
-  .ambition-copy p{color:var(--ink-soft); margin-bottom:18px; font-size:1.02rem;}
-  .ambition-copy strong{color:var(--ink);}
-  .info-card{border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:8px 24px;}
-  .mini-stat{display:flex; justify-content:space-between; padding:16px 0; border-bottom:1px solid var(--border);}
-  .mini-stat:last-child{border-bottom:none;}
-  .mini-stat .k{color:var(--ink-soft); font-size:.9rem;}
-  .mini-stat .v{font-family:'Space Grotesk',sans-serif; font-weight:600;}
-
-  /* ---------- ALLY RING ---------- */
-  .ring-section{
-    padding:120px 0;
-  }
-  .ring-split{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:80px;
-    max-width:1000px;
-    margin:0 auto;
-  }
-  .ring-left{
-    flex:1;
-    display:flex;
-    justify-content:center;
-  }
-  .ring-right{
-    flex:1;
-    max-width:440px;
-  }
-  .ring-title-row{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:18px;
-  }
-  .ring-title-row h2{
-    font-size:clamp(2rem, 3.5vw, 2.6rem);
-    margin:0;
-    color:var(--ink);
-  }
-  .badge-mini{
-    font-size:.65rem;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    padding:5px 10px;
-    border-radius:6px;
-    border:1px solid var(--border-strong);
-    color:var(--ink-soft);
-    font-weight:700;
-  }
-  .ring-right p.lead2{
-    color:var(--ink-soft);
-    font-size:1.05rem;
-    line-height:1.6;
-  }
-
-  /* ---------- PROJECTS ---------- */
-  .projects-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    max-width: 1040px; margin: 0 auto;
-  }
-  .project-card-new {
-    border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
-    padding: 32px 28px; display: flex; flex-direction: column; align-items: flex-start;
-    transition: transform .2s ease, border-color .2s ease, background .2s ease;
-  }
-  .project-card-new:hover { 
-    border-color: var(--border-strong); transform: translateY(-4px); background: var(--surface-2);
-  }
-  .project-card-new .eyebrow { 
-    margin-bottom: 14px; font-size: 0.75rem; 
-  }
-  .project-card-new h3 { 
-    font-size: 1.35rem; margin-bottom: 12px; color: var(--ink); 
-  }
-  .project-card-new p { 
-    color: var(--ink-soft); font-size: 0.95rem; margin: 0; line-height: 1.5; 
-  }
-
-  /* ---------- ROADMAP ---------- */
-  .roadmap-grid-new{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
-  }
-  .rmcard-new{
-    border:1px solid var(--border); border-radius:var(--radius); background:var(--surface);
-    overflow:hidden; display:flex; flex-direction:column;
-    transition:transform .2s ease, border-color .2s ease;
-  }
-  .rmcard-new:hover{border-color:var(--border-strong); transform:translateY(-4px);}
-  
-  .rmcard-visual{
-    background:var(--surface-2); padding:30px; display:flex; align-items:center; justify-content:center;
-    border-bottom:1px solid var(--border); min-height:170px;
-  }
-  .rmcard-visual lottie-player {
-    width: 120px; 
-    height: 120px;
-  }
-  html[data-theme="dark"] .rmcard-visual lottie-player {
-    filter: invert(1) hue-rotate(180deg) brightness(1.2); 
-  }
-  
-  .rmcard-content{
-    padding:26px 22px; flex:1;
-  }
-  .rmcard-content h3{font-size:1.05rem; margin-bottom:10px; color:var(--ink);}
-  .rmcard-content p{color:var(--ink-soft); font-size:.87rem; margin:0;}
-
-  /* ---------- cta ---------- */
-  .cta-section{text-align:center; padding:120px 0;}
-  .cta-box{border:1px solid var(--border); border-radius:24px; padding:76px 24px; background:var(--surface);}
-  .cta-box h2{font-size:clamp(2rem,4vw,3rem); margin-bottom:16px;}
-  .cta-box p{color:var(--ink-soft); max-width:480px; margin:0 auto 36px;}
-  .cta-links{display:flex; flex-wrap:wrap; justify-content:center; gap:14px;}
-
-  /* ---------- footer ---------- */
-  footer{border-top:1px solid var(--border); padding:64px 0 32px;}
-  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:48px;}
-  .footer-brand .brand{margin-bottom:14px;}
-  .footer-brand p{color:var(--ink-soft); font-size:.9rem; max-width:280px;}
-  .footer-col h4{font-size:.85rem; color:var(--ink); margin-bottom:16px;}
-  .footer-col li{margin-bottom:11px;}
-  .footer-col a{color:var(--ink-soft); font-size:.88rem;}
-  .footer-col a:hover{color:var(--ink);}
-  .footer-bottom{
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
-    border-top:1px solid var(--border); padding-top:26px; color:var(--ink-faint); font-size:.8rem;
-  }
-  .footer-bottom .legal{display:flex; gap:18px; flex-wrap:wrap;}
-  .footer-bottom .legal a{color:var(--ink-faint);}
-  .footer-bottom .legal a:hover{color:var(--ink);}
-  .footer-bottom .socials{display:flex; gap:14px;}
-  .footer-bottom .socials svg{width:17px; height:17px; color:var(--ink-faint);}
-  .footer-bottom .socials a:hover svg{color:var(--ink);}
-
-  @media (max-width:920px){
-    .nav-links{display:none;}
-    .hamburger{display:inline-flex;}
-    .ambition-grid{grid-template-columns:1fr; gap:36px;}
-    .roadmap-grid-new{grid-template-columns:repeat(2,1fr);}
-    .projects-grid{grid-template-columns:repeat(2,1fr);}
-    .ring-split{flex-direction:column; text-align:center;}
-    .ring-title-row{justify-content:center;}
-    .footer-grid{grid-template-columns:1fr 1fr; row-gap:32px;}
-  }
-  @media (max-width:560px){
-    .section{padding:72px 0;}
-    .hero{padding-top:calc(var(--nav-h) + 60px);}
-    .roadmap-grid-new{grid-template-columns:1fr;}
-    .projects-grid{grid-template-columns:1fr;}
-    .footer-grid{grid-template-columns:1fr;}
-    .footer-bottom{flex-direction:column; align-items:flex-start;}
-  }
-</style>
+<link rel="stylesheet" href="/main.css">
+  <script>
+    try {
+      var t = localStorage.getItem("ally-theme") || localStorage.getItem("theme") || "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#home">Vai al contenuto</a>
 
 <!-- ================= NAVBAR ================= -->
-<header class="nav" id="nav">
+<header class="site-header nav" id="nav">
   <div class="nav-inner">
     <a href="#home" class="brand">
-      <img src="/assets/favicon.png" alt="Ally Logo" style="height: 24px; width: auto;">
-      Ally
+      <svg viewBox="0 0 96 96" aria-hidden="true" focusable="false" style="width:24px;height:24px;flex-shrink:0"><path d="M25 84 L48 12 L71 84" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8" fill="none" stroke="currentColor" stroke-width="6.2"<path d="M48 5 L53 12 L48 19 L43 12 Z" fill="var(--accent)" stroke="none"/> stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Ally</span>
+      <span class="byvertex">By Vertex</span>
     </a>
     <nav class="nav-links">
       <a href="#home">Home</a>
@@ -492,15 +123,14 @@
 </div>
 
 <!-- ================= HERO ================= -->
-<section class="hero" id="home">
+<main id="main">
+  <section class="hero" id="home">
   <div class="wrap">
     <div class="badge">
       <span class="dot"></span>
       Fase Alpha &middot; In fase di sviluppo attivo
     </div>
-    <h1 class="display">
-      Sempre al tuo fianco.
-    </h1>
+    <h1 class="story-title"><span class="word">Sempre</span> <span class="word">al</span> <span class="word">tuo</span> <span class="word">fianco.</span></h1>
     <p class="lead">
       Più di una semplice app. Un salvavita. Stiamo costruendo l'ecosistema sanitario più avanzato al mondo per proteggerti ovunque, in qualsiasi momento.
     </p>
@@ -600,7 +230,7 @@
           background="transparent" 
           speed="1" 
           style="width: 100%; max-width: 360px; height: auto;"  
-          autoplay>
+          >
         </dotlottie-player>
       </div>
       <div class="ring-right reveal" style="transition-delay: 0.15s;">
@@ -625,7 +255,7 @@
     </div>
     
     <div class="projects-grid reveal">
-      <a href="https://vertexishere.com/mergen" target="_blank" rel="noopener" class="project-card-new">
+      <a href="https://vertexishere.com/en/" target="_blank" rel="noopener" class="project-card-new">
         <span class="eyebrow">ARCHITETTURA AI</span>
         <h3>Mergen</h3>
         <p>
@@ -665,7 +295,7 @@
       
       <div class="rmcard-new">
         <div class="rmcard-visual">
-          <lottie-player src="/assets/animation/leaderboard.json" background="transparent" speed="1" loop autoplay style="transform: scale(1.6);"></lottie-player>
+          <lottie-player src="/assets/animation/leaderboard.json" background="transparent" speed="1" loop  style="transform: scale(1.6);"></lottie-player>
         </div>
         <div class="rmcard-content">
           <h3>Salute gamificata</h3>
@@ -675,7 +305,7 @@
       
       <div class="rmcard-new">
         <div class="rmcard-visual">
-          <lottie-player src="/assets/animation/graphic.json" background="transparent" speed="1" loop autoplay></lottie-player>
+          <lottie-player src="/assets/animation/graphic.json" background="transparent" speed="1" loop ></lottie-player>
         </div>
         <div class="rmcard-content">
           <h3>Riepilogo mensile "Wrapped"</h3>
@@ -685,7 +315,7 @@
       
       <div class="rmcard-new">
         <div class="rmcard-visual">
-          <lottie-player src="/assets/animation/watch.json" background="transparent" speed="1" loop autoplay></lottie-player>
+          <lottie-player src="/assets/animation/watch.json" background="transparent" speed="1" loop ></lottie-player>
         </div>
         <div class="rmcard-content">
           <h3>Ecosistema indossabile</h3>
@@ -695,7 +325,7 @@
       
       <div class="rmcard-new">
         <div class="rmcard-visual">
-          <lottie-player src="/assets/animation/warning.json" background="transparent" speed="1" loop autoplay></lottie-player>
+          <lottie-player src="/assets/animation/warning.json" background="transparent" speed="1" loop ></lottie-player>
         </div>
         <div class="rmcard-content">
           <h3>Cerchio di sicurezza intelligente</h3>
@@ -721,6 +351,7 @@
     </div>
   </div>
 </section>
+  </main>`
 
 <!-- ================= FOOTER ================= -->
 <footer>
@@ -728,8 +359,9 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand">
-          <img src="/assets/favicon.png" alt="Ally Logo" style="height: 24px; width: auto;">
-          Ally
+          <svg viewBox="0 0 96 96" aria-hidden="true" focusable="false" style="width:24px;height:24px;flex-shrink:0"><path d="M25 84 L48 12 L71 84" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8" fill="none" stroke="currentColor" stroke-width="6.2"<path d="M48 5 L53 12 L48 19 L43 12 Z" fill="var(--accent)" stroke="none"/> stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Ally</span>
+          <span class="byvertex">By Vertex</span>
         </div>
         <p>Sempre al tuo fianco. Un ecosistema sanitario sviluppato da Vertex Corporation.</p>
       </div>
@@ -779,81 +411,6 @@
   </div>
 </footer>
 
-<script>
-(function(){
-  var nav = document.getElementById('nav');
-  var onScroll = function(){
-    if(window.scrollY > 12){ nav.classList.add('scrolled'); }
-    else { nav.classList.remove('scrolled'); }
-  };
-  document.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-  var hbBtn = document.getElementById('hamburgerBtn');
-  var mobileMenu = document.getElementById('mobileMenu');
-  hbBtn.addEventListener('click', function(){
-    var open = mobileMenu.classList.toggle('open');
-    hbBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  mobileMenu.querySelectorAll('a,button').forEach(function(a){
-    a.addEventListener('click', function(){ mobileMenu.classList.remove('open'); });
-  });
-
-  var revealEls = document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
-      });
-    }, {threshold:.15});
-    revealEls.forEach(function(el){ io.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('in'); });
-  }
-
-  // language dropdown
-  var langWrap = document.getElementById('langWrap');
-  var langBtn = document.getElementById('langBtn');
-  langBtn.addEventListener('click', function(e){
-    e.stopPropagation();
-    var open = langWrap.classList.toggle('open');
-    langBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  document.addEventListener('click', function(){ langWrap.classList.remove('open'); });
-
-  // theme toggle
-  var themeBtn = document.getElementById('themeBtn');
-  var moonIcon = document.getElementById('themeIconMoon');
-  var sunIcon = document.getElementById('themeIconSun');
-  
-  function setTheme(theme){
-    document.documentElement.setAttribute('data-theme', theme);
-    moonIcon.style.display = theme === 'dark' ? 'none' : 'block';
-    sunIcon.style.display = theme === 'dark' ? 'block' : 'none';
-    try{ localStorage.setItem('ally-theme', theme); }catch(e){}
-  }
-  
-  try{
-    var savedTheme = localStorage.getItem('ally-theme');
-    if(savedTheme) setTheme(savedTheme);
-  }catch(e){}
-
-  themeBtn.addEventListener('click', function(){
-    var current = document.documentElement.getAttribute('data-theme');
-    setTheme(current === 'dark' ? 'light' : 'dark');
-  });
-})();
-
-    var ringplayer = document.getElementById('ringplayer');
-      if (ringplayer) {
-        ringplayer.addEventListener('complete', function() {
-          setTimeout(function() {
-            ringplayer.seek(0); 
-            ringplayer.play();   
-          }, 2000); 
-        });
-      }
-</script>
-
+<script src="/main.js" defer></script>
 </body>
 </html>

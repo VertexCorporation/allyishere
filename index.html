@@ -44,39 +44,46 @@
   <link rel="alternate" hreflang="x-default" href="https://allyishere.com/en/" />
 
   <!-- Theme Color -->
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafaf7" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0c" />
 
   <!-- Favicons -->
-  <link rel="icon" href="assets/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="main.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("ally-theme") || localStorage.getItem("theme") || "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
 </head>
 
 <body>
-  <!-- Background particles -->
-  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Theme toggle -->
-  <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
-    <div class="theme-icon" aria-hidden="true"></div>
-  </button>
-
-  <main class="page">
+  <main class="page" id="main">
 
     <!-- HERO SECTION -->
-    <section class="hero" aria-label="Hero">
-      <div class="hero-bg-glow" aria-hidden="true"></div>
+    <section class="hero" aria-label="Intro">
 
       <div class="container">
-        <div class="badge reveal">Alpha Phase</div>
+        <div class="badge reveal"><span class="dot" aria-hidden="true"></span> Alpha Phase</div>
 
         <h1 class="reveal delay-1">Ally, always your ally.</h1>
 
         <p class="hero-subtitle reveal delay-2">
           More than an app. A <span class="highlight">lifeline</span>.
-          We are building the world's most advanced health ecosystem to protect you, everywhere, every time.
+          A proactive health ecosystem designed to protect you, everywhere, every time.
         </p>
       </div>
     </section>
