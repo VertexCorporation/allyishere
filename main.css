@@ -771,3 +771,61 @@
 
   /* cards: slightly rounder */
   .project-card-new, .rmcard-new, .info-card, .resource-card { border-radius: 14px; }
+
+
+  /* ---------- store badge sizing fix (EN story-actions context) ---------- */
+  .story-actions .store-badge,
+  .hero-ctas .store-badge {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    min-height: 58px;
+    min-width: 178px;
+    max-width: 220px;
+    padding: 10px clamp(12px, 1.25vw, 18px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-s);
+    background: transparent;
+    color: var(--ink);
+    text-align: left;
+  }
+
+  .story-actions .store-badge > svg,
+  .hero-ctas .store-badge > svg {
+    width: 26px;
+    height: 26px;
+    max-width: 26px;
+    max-height: 26px;
+    justify-self: center;
+    flex-shrink: 0;
+  }
+
+  .story-actions .store-badge > span,
+  .hero-ctas .store-badge > span {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .story-actions .store-badge small,
+  .hero-ctas .store-badge small {
+    font-size: 10.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .story-actions .store-badge strong,
+  .hero-ctas .store-badge strong {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

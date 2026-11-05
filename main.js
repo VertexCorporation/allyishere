@@ -56,25 +56,46 @@
 
     var displayNames = null;
     try {
-      displayNames = new Intl.DisplayNames([activeLocale], { type: "language" });
+      displayNames = new Intl.DisplayNames([activeLocale], {
+        type: "language",
+        languageDisplay: "standard"
+      });
     } catch (e) {
-      return;
+      try {
+        displayNames = new Intl.DisplayNames([activeLocale], { type: "language" });
+      } catch (e2) {
+        return;
+      }
     }
+
+    if (!displayNames) return;
 
     menuLinks.forEach(function (link) {
       var href = link.getAttribute("href") || "";
       var m = href.match(/^\/([a-z]{2})(\/|$)/);
       if (!m) return;
       var langCode = m[1];
+      var nativeName = link.textContent.trim();
       var localizedName;
+
       try {
         localizedName = displayNames.of(langCode);
       } catch (e) {
         return;
       }
-      if (localizedName && typeof localizedName === "string") {
-        link.textContent = localizedName.charAt(0).toUpperCase() + localizedName.slice(1);
+
+      // Only use the localized name if it looks like a real name (not an abbreviation).
+      // Abbreviations are typically <= 4 chars or all-lowercase without proper nouns.
+      if (
+        localizedName &&
+        typeof localizedName === "string" &&
+        localizedName.length >= 3 &&
+        localizedName !== langCode
+      ) {
+        link.textContent =
+          localizedName.charAt(0).toUpperCase() + localizedName.slice(1);
       }
+      // else: keep the native name already in the HTML
     });
   }
 
