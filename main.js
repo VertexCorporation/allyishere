@@ -18,11 +18,7 @@
 
   function storedTheme() {
     try {
-      return (
-        localStorage.getItem(THEME_KEY) ||
-        localStorage.getItem("theme") ||
-        null
-      );
+      return localStorage.getItem(THEME_KEY) || localStorage.getItem("theme") || null;
     } catch (e) {
       return null;
     }
@@ -37,14 +33,52 @@
     btn.addEventListener("click", function () {
       var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       applyTheme(next);
-      try {
-        localStorage.setItem(THEME_KEY, next);
-      } catch (e) {}
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
     });
   }
 
   bindThemeButton("themeBtn");
   bindThemeButton("themeToggle");
+
+  /* ---------- locale detection ---------- */
+  function getActiveLocale() {
+    var path = window.location.pathname;
+    var m = path.match(/^\/([a-z]{2})(\/|$)/);
+    if (m) return m[1];
+    return "en";
+  }
+
+  /* ---------- localized language names in dropdown ---------- */
+  function localizeLanguageNames() {
+    var activeLocale = getActiveLocale();
+    var menuLinks = document.querySelectorAll(".lang-menu a[href]");
+    if (!menuLinks.length) return;
+
+    var displayNames = null;
+    try {
+      displayNames = new Intl.DisplayNames([activeLocale], { type: "language" });
+    } catch (e) {
+      return;
+    }
+
+    menuLinks.forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      var m = href.match(/^\/([a-z]{2})(\/|$)/);
+      if (!m) return;
+      var langCode = m[1];
+      var localizedName;
+      try {
+        localizedName = displayNames.of(langCode);
+      } catch (e) {
+        return;
+      }
+      if (localizedName && typeof localizedName === "string") {
+        link.textContent = localizedName.charAt(0).toUpperCase() + localizedName.slice(1);
+      }
+    });
+  }
+
+  localizeLanguageNames();
 
   /* ---------- sticky nav ---------- */
   var nav = document.getElementById("nav");
@@ -92,6 +126,7 @@
       }
     });
   }
+
   /* ---------- scroll reveal ---------- */
   var reduceMotion = false;
   try {

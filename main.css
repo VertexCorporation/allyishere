@@ -643,3 +643,62 @@
 @media (max-width: 860px) {
   .product-layout { grid-template-columns: 1fr; }
 }
+
+
+  /* ---------- RTL support ---------- */
+  [dir="rtl"] .lang-menu { right: auto; left: 0; text-align: right; }
+  [dir="rtl"] .lang-menu a { flex-direction: row-reverse; text-align: right; }
+  [dir="rtl"] .lang-menu a.active::after { content: "\2713"; margin-right: 0; margin-left: auto; }
+  [dir="rtl"] .nav-links a::after { transform-origin: right; }
+  [dir="rtl"] .brand .byvertex { margin-right: 0; margin-left: 0; }
+  [dir="rtl"] .hero-ctas,
+  [dir="rtl"] .cta-links,
+  [dir="rtl"] .store-badges { direction: rtl; }
+  [dir="rtl"] .builtwith-logos { direction: rtl; }
+  [dir="rtl"] footer { text-align: right; }
+  [dir="rtl"] .footer-grid { text-align: right; }
+  [dir="rtl"] .section-head { text-align: right; }
+  [dir="rtl"] .section-head.center { text-align: center; }
+  [dir="rtl"] .ambition-grid { direction: rtl; }
+  [dir="rtl"] .projects-grid,
+  [dir="rtl"] .roadmap-grid-new { direction: rtl; }
+  [dir="rtl"] .project-card-new,
+  [dir="rtl"] .rmcard-new { text-align: right; }
+  [dir="rtl"] .mini-stat { flex-direction: row-reverse; }
+  [dir="rtl"] .story-content { direction: rtl; }
+  [dir="rtl"] .story-title { direction: rtl; }
+  [dir="rtl"] .story-scroll-cue { right: auto; left: clamp(22px, 4vw, 56px); }
+  [dir="rtl"] .mobile-menu { direction: rtl; text-align: right; }
+
+  /* ---------- anchor scroll offset ---------- */
+  section[id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
+
+
+  /* ---------- text wrapping and overflow guards ---------- */
+  .story-title { text-wrap: balance; }
+  .section-head h2 { text-wrap: balance; }
+  .btn { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+  .lang-menu a { overflow: hidden; text-overflow: ellipsis; }
+  .lang-menu { max-width: calc(100vw - 32px); }
+  .hero-ctas .btn,
+  .story-actions .btn { max-width: 100%; }
+  .stat .num { overflow-wrap: break-word; }
+  .stat .label { overflow-wrap: break-word; }
+  .info-card { overflow-wrap: break-word; }
+  .project-card-new,
+  .rmcard-new { overflow-wrap: break-word; }
+  .footer-col { overflow-wrap: break-word; }
+  .footer-col a { overflow-wrap: anywhere; }
+  .mobile-menu a { overflow-wrap: anywhere; }
+
+
+  /* ---------- long-text safety (English, German, Russian) ---------- */
+  .btn { min-width: 0; flex-shrink: 1; }
+  .nav-right { flex-wrap: nowrap; }
+  .nav-right .lang-wrap { flex-shrink: 0; }
+  .nav-right .theme-btn { flex-shrink: 0; }
+  .hero-ctas { max-width: 100%; }
+  .story-actions { max-width: 100%; }
+  .store-badge { max-width: 220px; }
+  .lang-btn { max-width: 160px; }
+  .lang-btn span { overflow: hidden; text-overflow: ellipsis; }
