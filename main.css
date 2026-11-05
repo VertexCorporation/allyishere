@@ -702,3 +702,72 @@
   .store-badge { max-width: 220px; }
   .lang-btn { max-width: 160px; }
   .lang-btn span { overflow: hidden; text-overflow: ellipsis; }
+
+
+  /* ---------- hero visual effects (work on all pages) ---------- */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 50% 30%, rgba(139,131,255,.06), transparent 40%),
+      linear-gradient(rgba(107,103,92,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(107,103,92,.045) 1px, transparent 1px);
+    background-size: auto, 76px 76px, 76px 76px;
+    -webkit-mask-image: radial-gradient(760px 460px at 50% 0%, #000, transparent 76%);
+    mask-image: radial-gradient(760px 460px at 50% 0%, #000, transparent 76%);
+    pointer-events: none;
+  }
+
+  html[data-theme="dark"] .hero::before {
+    background:
+      radial-gradient(circle at 50% 30%, rgba(139,131,255,.08), transparent 40%),
+      linear-gradient(rgba(244,242,236,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(244,242,236,.03) 1px, transparent 1px);
+    background-size: auto, 76px 76px, 76px 76px;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    width: min(72vw, 640px);
+    aspect-ratio: 1;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: .045;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><path d='M25 84 L48 12 L71 84' fill='none' stroke='%23141310' stroke-width='1.2'/><path d='M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8' fill='none' stroke='%23141310' stroke-width='1'/></svg>") no-repeat center / contain;
+  }
+
+  html[data-theme="dark"] .hero::after {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><path d='M25 84 L48 12 L71 84' fill='none' stroke='%23f4f2ec' stroke-width='1.2'/><path d='M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8' fill='none' stroke='%23f4f2ec' stroke-width='1'/></svg>") no-repeat center / contain;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero::before, .hero::after { display: none; }
+  }
+
+  /* ---------- warm Ally touches ---------- */
+  .stat { border-radius: 0; }
+  .stat:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; }
+  .stat:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+  .lead, .lead2 { max-width: 580px; }
+  .hero p.lead { font-size: 1.05rem; line-height: 1.65; }
+
+  /* ensure lead gets story-sub treatment visually */
+  .hero p.lead {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    text-wrap: balance;
+  }
+
+  /* buttons: slightly rounder for warmth */
+  .btn { border-radius: 12px; }
+
+  /* cards: slightly rounder */
+  .project-card-new, .rmcard-new, .info-card, .resource-card { border-radius: 14px; }
