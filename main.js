@@ -40,67 +40,6 @@
   bindThemeButton("themeBtn");
   bindThemeButton("themeToggle");
 
-  /* ---------- locale detection ---------- */
-  function getActiveLocale() {
-    var path = window.location.pathname;
-    var m = path.match(/^\/([a-z]{2})(\/|$)/);
-    if (m) return m[1];
-    return "en";
-  }
-
-  /* ---------- localized language names in dropdown ---------- */
-  function localizeLanguageNames() {
-    var activeLocale = getActiveLocale();
-    var menuLinks = document.querySelectorAll(".lang-menu a[href]");
-    if (!menuLinks.length) return;
-
-    var displayNames = null;
-    try {
-      displayNames = new Intl.DisplayNames([activeLocale], {
-        type: "language",
-        languageDisplay: "standard"
-      });
-    } catch (e) {
-      try {
-        displayNames = new Intl.DisplayNames([activeLocale], { type: "language" });
-      } catch (e2) {
-        return;
-      }
-    }
-
-    if (!displayNames) return;
-
-    menuLinks.forEach(function (link) {
-      var href = link.getAttribute("href") || "";
-      var m = href.match(/^\/([a-z]{2})(\/|$)/);
-      if (!m) return;
-      var langCode = m[1];
-      var nativeName = link.textContent.trim();
-      var localizedName;
-
-      try {
-        localizedName = displayNames.of(langCode);
-      } catch (e) {
-        return;
-      }
-
-      // Only use the localized name if it looks like a real name (not an abbreviation).
-      // Abbreviations are typically <= 4 chars or all-lowercase without proper nouns.
-      if (
-        localizedName &&
-        typeof localizedName === "string" &&
-        localizedName.length >= 3 &&
-        localizedName !== langCode
-      ) {
-        link.textContent =
-          localizedName.charAt(0).toUpperCase() + localizedName.slice(1);
-      }
-      // else: keep the native name already in the HTML
-    });
-  }
-
-  localizeLanguageNames();
-
   /* ---------- sticky nav ---------- */
   var nav = document.getElementById("nav");
   if (nav) {
