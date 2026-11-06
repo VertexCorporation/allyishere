@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Root -->
-  <url>
-    <loc>https://allyishere.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Localize Pages -->
-  <url>
-    <loc>https://allyishere.com/en/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://allyishere.com/tr/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- Localized landing pages -->
   <url>
     <loc>https://allyishere.com/ar/</loc>
     <changefreq>weekly</changefreq>
@@ -33,6 +16,11 @@
     <loc>https://allyishere.com/de/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://allyishere.com/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://allyishere.com/es/</loc>
@@ -90,18 +78,22 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://allyishere.com/tr/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://allyishere.com/zh/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- Legal Pages -->
+  <!-- Legal pages -->
   <url>
     <loc>https://allyishere.com/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
     <loc>https://allyishere.com/terms-of-service.html</loc>
     <changefreq>yearly</changefreq>

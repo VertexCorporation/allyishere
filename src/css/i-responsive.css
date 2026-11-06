@@ -1,0 +1,39 @@
+
+/* ----------------------------- 15. Responsive ---------------------------- */
+@media (max-width: 1080px) {
+  .roadmap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .nav-join { display: none; }
+  .hamburger { display: inline-flex; }
+  .mission-grid,
+  .ring-grid { grid-template-columns: 1fr; }
+  .ring-copy { text-align: center; }
+  .ring-title-row { justify-content: center; }
+  .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .brand-by { display: none; }
+  .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .projects-grid,
+  .roadmap-grid { grid-template-columns: 1fr; }
+  .hero-ctas { width: 100%; max-width: 360px; margin-inline: auto; }
+  .hero-ctas .store-badge { flex: 1 1 100%; }
+  .hero-github { flex: 1 1 100%; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 380px) {
+  .lang-code { display: none; }
+  .lang-btn { padding: 0 10px; }
+  .hero-stats { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 1440px) {
+  :root { --maxw: 1180px; }
+}

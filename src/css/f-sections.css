@@ -1,0 +1,92 @@
+
+/* ----------------------------- 8. Mission -------------------------------- */
+.mission-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+.mission-copy h2 {
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  margin-bottom: 18px;
+  text-wrap: balance;
+}
+.mission-p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+.mission-p strong { color: var(--text); font-weight: 600; }
+
+.info-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  padding: 6px 22px;
+}
+.mini-stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+.mini-stat:last-child { border-bottom: 0; }
+.mini-stat .k { color: var(--text-muted); font-size: .9rem; flex: none; }
+.mini-stat .v {
+  color: var(--text);
+  font-weight: 600;
+  text-align: end;
+  overflow-wrap: anywhere;
+}
+
+/* ----------------------------- 9. Ring ----------------------------------- */
+.ring-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+  max-width: 980px;
+  margin-inline: auto;
+}
+.ring-stage {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 62%),
+    var(--surface);
+}
+.ring-stage dotlottie-player {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  height: auto;
+}
+.ring-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.ring-title-row h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
+.badge-mini {
+  flex: none;
+  padding: 4px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-s);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.ring-copy .lead {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.04rem;
+  line-height: 1.7;
+}

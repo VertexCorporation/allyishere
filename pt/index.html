@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt" data-theme="dark">
+<html lang="pt" dir="ltr" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ally - O Futuro da Saúde | Vertex</title>
-<meta name="description" content="Ally: Reduz as taxas de mortalidade global através do monitoramento de saúde com IA e tecnologia vestível. Sempre ao seu lado.">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafaf7">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0c">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ally - O Futuro da Saúde | Vertex</title>
+  <meta name="description" content="Ally: Reduz as taxas de mortalidade global através do monitoramento de saúde com IA e tecnologia vestível. Sempre ao seu lado.">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7F9FB">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
 
-<meta property="og:title" content="Ally - Sempre ao seu lado">
-<meta property="og:description" content="A missão de proteger a humanidade por meio do monitoramento proativo da saúde.">
-<meta property="og:image" content="https://allyishere.com/assets/cover.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://allyishere.com/pt/">
-<meta property="og:site_name" content="Ally">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://allyishere.com/assets/cover.png">
-  <link rel="canonical" href="https://allyishere.com/pt/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ally">
+  <meta property="og:title" content="Ally - Sempre ao seu lado">
+  <meta property="og:description" content="A missão de proteger a humanidade por meio do monitoramento proativo da saúde.">
+  <meta property="og:url" content="https://allyishere.com/pt/">
+  <meta property="og:image" content="https://allyishere.com/assets/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ally - Sempre ao seu lado">
+  <meta name="twitter:description" content="A missão de proteger a humanidade por meio do monitoramento proativo da saúde.">
+  <meta name="twitter:image" content="https://allyishere.com/assets/cover.png">
+
+  <link rel="canonical" href="https://allyishere.com/pt/">
   <link rel="alternate" hreflang="ar" href="https://allyishere.com/ar/">
   <link rel="alternate" hreflang="az" href="https://allyishere.com/az/">
   <link rel="alternate" hreflang="de" href="https://allyishere.com/de/">
@@ -39,366 +44,316 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Ubuntu:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-
-<link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/main.css">
   <script>
+    /* Theme bootstrap: runs before paint to avoid a flash of the wrong theme. */
     try {
-      var t = localStorage.getItem("ally-theme") || localStorage.getItem("theme") || "dark";
+      var t = localStorage.getItem("ally-theme");
+      if (t !== "light" && t !== "dark") t = "dark";
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://vertexishere.com/#organization","name":"Vertex","url":"https://vertexishere.com","logo":"https://vertexishere.com/assets/logo.svg"},{"@type":"WebSite","@id":"https://allyishere.com/#website","url":"https://allyishere.com","name":"Ally","inLanguage":"pt","publisher":{"@id":"https://vertexishere.com/#organization"}},{"@type":"WebPage","url":"https://allyishere.com/pt/","name":"Ally - Sempre ao seu lado","description":"A missão de proteger a humanidade por meio do monitoramento proativo da saúde.","inLanguage":"pt","isPartOf":{"@id":"https://allyishere.com/#website"}}]}</script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.12/dist/lottie-player.js" defer></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body>
-  <a class="skip-link" href="#home">Pular para o conteúdo</a>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<!-- ================= NAVBAR ================= -->
-<header class="site-header nav" id="nav">
-  <div class="nav-inner">
-    <a href="#home" class="brand">
-      <svg viewBox="0 0 96 96" aria-hidden="true" focusable="false"><path d="M25 84 L48 12 L71 84" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8" fill="none" stroke="currentColor" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 5 L53 12 L48 19 L43 12 Z" fill="var(--accent)" stroke="none"/></svg>
-      <span>Ally</span>
-      <span class="byvertex">Por Vertex</span>
-    </a>
-    <nav class="nav-links">
+  <header class="site-header" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/pt/" aria-label="Ally — Início">
+        <svg class="brand-mark" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><path d="M25 84 L48 12 L71 84" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8" fill="none" stroke="currentColor" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 5 L53 12 L48 19 L43 12 Z" fill="var(--accent)" stroke="none"/></svg>
+        <span class="brand-name">Ally</span>
+        <span class="brand-by">By Vertex</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#home">Início</a>
+        <a href="#mission">Missão</a>
+        <a href="#ring">Ally Ring</a>
+        <a href="#roadmap">Roteiro</a>
+        <a href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-sm nav-join" href="#cta">Junte-se a nós</a>
+
+        <div class="lang-wrap" id="langWrap">
+          <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Alterar o idioma">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8M12 3.6c2.5 2.3 3.9 5.3 3.9 8.4s-1.4 6.1-3.9 8.4c-2.5-2.3-3.9-5.3-3.9-8.4S9.5 5.9 12 3.6z"/></svg>
+            <span class="lang-code">pt</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><path d="M6 9.5l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="/ar/" lang="ar" hreflang="ar">العربية</a>
+            <a href="/az/" lang="az" hreflang="az">Azərbaycanca</a>
+            <a href="/de/" lang="de" hreflang="de">Deutsch</a>
+            <a href="/en/" lang="en" hreflang="en">English</a>
+            <a href="/es/" lang="es" hreflang="es">Español</a>
+            <a href="/fr/" lang="fr" hreflang="fr">Français</a>
+            <a href="/hi/" lang="hi" hreflang="hi">हिन्दी</a>
+            <a href="/id/" lang="id" hreflang="id">Bahasa Indonesia</a>
+            <a href="/it/" lang="it" hreflang="it">Italiano</a>
+            <a href="/ja/" lang="ja" hreflang="ja">日本語</a>
+            <a href="/ko/" lang="ko" hreflang="ko">한국어</a>
+            <a href="/ku/" lang="ku" hreflang="ku">Kurdî</a>
+            <a href="/nl/" lang="nl" hreflang="nl">Nederlands</a>
+            <a href="/pt/" lang="pt" hreflang="pt" aria-current="true">Português</a>
+            <a href="/ru/" lang="ru" hreflang="ru">Русский</a>
+            <a href="/tr/" lang="tr" hreflang="tr">Türkçe</a>
+            <a href="/zh/" lang="zh" hreflang="zh">中文</a>
+          </div>
+        </div>
+
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Alternar o tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="M20.2 13.6A8.4 8.4 0 0 1 10.4 3.8a8.4 8.4 0 1 0 9.8 9.8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação principal">
       <a href="#home">Início</a>
-      <a href="#ambition">Missão</a>
+      <a href="#mission">Missão</a>
       <a href="#ring">Ally Ring</a>
       <a href="#roadmap">Roteiro</a>
-      <a href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">Documentação</a>
+      <a href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-primary mobile-join" href="#cta">Junte-se a nós</a>
     </nav>
-    <div class="nav-right">
-      <div class="lang-wrap" id="langWrap">
-        <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>
-          <span id="langBtnLabel">PT</span>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="lang-menu">
-          <a href="/tr/">Türkçe</a>
-          <a href="/en/">English</a>
-          <a href="/ar/">العربية</a>
-          <a href="/az/">Azərbaycanca</a>
-          <a href="/de/">Deutsch</a>
-          <a href="/es/">Español</a>
-          <a href="/fr/">Français</a>
-          <a href="/hi/">हिन्दी</a>
-          <a href="/id/">Bahasa Indonesia</a>
-          <a href="/it/">Italiano</a>
-          <a href="/ja/">日本語</a>
-          <a href="/ko/">한국어</a>
-          <a href="/ku/">Kurdî</a>
-          <a href="/nl/">Nederlands</a>
-          <a href="/pt/" class="active">Português</a>
-          <a href="/ru/">Русский</a>
-          <a href="/zh/">中文</a>
-        </div>
-      </div>
-      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme" type="button">
-        <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <svg id="themeIconSun" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
-      <a class="btn btn-solid" href="#cta">
-        Junte-se a nós
-      </a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="18"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
+  </header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home">Início</a>
-  <a href="#ambition">Missão</a>
-  <a href="#ring">Ally Ring</a>
-  <a href="#roadmap">Roteiro</a>
-  <a href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">Documentação</a>
-  <a class="btn btn-solid" href="#cta">Junte-se a nós</a>
-</div>
 
-<!-- ================= HERO ================= -->
-<main id="main">
-  <section class="hero" id="home">
-    <div class="story-stage">
-      <div class="story-content">
-        <div class="badge reveal" style="display:none">
-          <span class="dot" aria-hidden="true"></span>
-          Alpha Phase &middot; In active development
-        </div>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="wrap hero-inner">
         <h1 class="story-title"><span class="word">Sempre</span> <span class="word">ao</span> <span class="word">seu</span> <span class="word">lado.</span></h1>
-        <p class="story-sub">
-Mais do que apenas um aplicativo. Um salva-vidas. Estamos construindo o ecossistema de saúde mais avançado do mundo para protegê-lo em todos os lugares, a qualquer momento.
-</p>
-        <div class="story-actions">
-<a class="btn btn-solid" href="https://testflight.apple.com/join/j6eV7uYZ" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.462 2.098-1.14 2.816-.744.79-1.98 1.398-2.977 1.398-.13 0-.253-.02-.323-.032-.014-.116-.04-.35-.04-.583 0-1.14.51-2.29 1.19-3.05.744-.83 2.05-1.44 3.12-1.48.013.14.17.32.17.93zm3.606 15.28c-.05.155-.4 1.36-1.32 2.61-.79 1.08-1.61 2.16-2.9 2.18-1.27.02-1.68-.75-3.13-.75-1.45 0-1.9.73-3.11.77-1.25.05-2.2-1.17-3-2.24-1.64-2.19-2.9-6.2-1.21-8.9.84-1.34 2.34-2.19 3.97-2.21 1.22-.02 2.37.82 3.11.82.74 0 2.13-1.02 3.6-.87.61.026 2.33.246 3.44 1.85-.09.056-2.05 1.2-2.03 3.58.02 2.84 2.49 3.79 2.52 3.8z"/></svg>
-        <span class="stack">
-          <span class="top">Baixar na</span>
-          <span class="bot">App Store</span>
-        </span>
-      </a>
-      <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.vertex.ally" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.6c-.3.28-.5.72-.5 1.28v16.24c0 .56.2 1 .5 1.28l.1.08L13 12l-9.3-9.48-.1.08z"/><path d="M16.1 15.1l-3.1-3.1 3.1-3.1 3.7 2.13c1.05.6 1.05 1.58 0 2.18l-3.7 2.13z" opacity=".7"/><path d="M13 12l3.1 3.1-11.4 6.55c-.5.3-1 .3-1.4-.02L13 12z" opacity=".85"/><path d="M13 12L3.3 2.37c.4-.32.9-.32 1.4-.02L16.1 8.9 13 12z"/></svg>
-        <span class="stack">
-          <span class="top">Disponível no</span>
-          <span class="bot">Google Play</span>
-        </span>
-      </a>
-      <a class="btn btn-outline" href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
-        Ver no GitHub
-      </a>
+        <p class="story-sub">Mais do que apenas um aplicativo. Um salva-vidas. Estamos construindo o ecossistema de saúde mais avançado do mundo para protegê-lo em todos os lugares, a qualquer momento.</p>
+        <div class="hero-ctas">
+          <a class="store-badge" href="https://testflight.apple.com/join/j6eV7uYZ" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.365 1.43c0 1.14-.462 2.098-1.14 2.816-.744.79-1.98 1.398-2.977 1.398-.13 0-.253-.02-.323-.032-.014-.116-.04-.35-.04-.583 0-1.14.51-2.29 1.19-3.05.744-.83 2.05-1.44 3.12-1.48.013.14.17.32.17.93zm3.606 15.28c-.05.155-.4 1.36-1.32 2.61-.79 1.08-1.61 2.16-2.9 2.18-1.27.02-1.68-.75-3.13-.75-1.45 0-1.9.73-3.11.77-1.25.05-2.2-1.17-3-2.24-1.64-2.19-2.9-6.2-1.21-8.9.84-1.34 2.34-2.19 3.97-2.21 1.22-.02 2.37.82 3.11.82.74 0 2.13-1.02 3.6-.87.61.026 2.33.246 3.44 1.85-.09.056-2.05 1.2-2.03 3.58.02 2.84 2.49 3.79 2.52 3.8z"/><path d="M12.25 3.02c.03-2.02 1.65-3.02 1.72-3.02.94 1.31 1.06 3.32.09 4.77-1.01.85-2.03.7-2.83.55.02-.77.35-1.72 1.02-2.3z" opacity=".85"/></svg>
+            <span class="stack"><small>Baixar na</small><strong>App Store</strong></span>
+          </a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.vertex.ally" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3.6 2.6c-.3.28-.5.72-.5 1.28v16.24c0 .56.2 1 .5 1.28l.1.08L13 12l-9.3-9.48-.1.08z"/><path d="M16.1 15.1l-3.1-3.1 3.1-3.1 3.7 2.13c1.05.6 1.05 1.58 0 2.18l-3.7 2.13z" opacity=".7"/><path d="M13 12l3.1 3.1-11.4 6.55c-.5.3-1 .3-1.4-.02L13 12z" opacity=".85"/><path d="M13 12L3.3 2.37c.4-.32.9-.32 1.4-.02L16.1 8.9 13 12z"/></svg>
+            <span class="stack"><small>Disponível no</small><strong>Google Play</strong></span>
+          </a>
+          <a class="btn btn-outline hero-github" href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            Ver no GitHub
+          </a>
         </div>
       </div>
-      <div class="story-scroll-cue" aria-hidden="true"><span></span>Scroll</div>
-    </div>
+      <div class="wrap">
+        <dl class="hero-stats reveal">
+          <div class="stat"><dt>Fase de desenvolvimento</dt><dd>Alpha</dd></div>
+          <div class="stat"><dt>Plataformas nativas</dt><dd>iOS &amp; Android</dd></div>
+          <div class="stat"><dt>Análise em tempo real</dt><dd>24/7</dd></div>
+          <div class="stat"><dt>Licença open source</dt><dd>Apache 2.0</dd></div>
+        </dl>
+      </div>
+    </section>
 
+    <section class="builtwith">
+      <div class="wrap">
+        <p class="builtwith-label">Nossa infraestrutura e tecnologias são impulsionadas pelos melhores</p>
+        <div class="builtwith-logos reveal">
+          <img src="/assets/partners/assemblyai.svg" alt="AssemblyAI" width="120" height="20" loading="lazy">
+          <img src="/assets/partners/cloudflare.svg" alt="Cloudflare" width="120" height="20" loading="lazy">
+          <img src="/assets/partners/deepgram.jpeg" alt="Deepgram" width="110" height="20" loading="lazy">
+          <img src="/assets/partners/fal.svg" alt="fal" width="60" height="20" loading="lazy">
+          <img src="/assets/partners/gitlab.svg" alt="GitLab" width="90" height="20" loading="lazy">
+          <img src="/assets/partners/miro.svg" alt="Miro" width="70" height="20" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section mission" id="mission">
+      <div class="wrap mission-grid">
+        <div class="mission-copy reveal">
+          <p class="eyebrow accent">Nossa Missão</p>
+          <h2>Milhões de mortes evitáveis ocorrem todos os anos. Nós nos recusamos a aceitar isso.</h2>
+          <p class="mission-p"><strong>A missão do Ally é simples, mas gigantesca:</strong> democratizar os dados de saúde, permitir o diagnóstico precoce e reduzir significativamente as taxas de mortalidade globais.</p>
+          <p class="mission-p">Combinamos software e hardware para construir um escudo em torno da humanidade — começando com um aplicativo que faz com que o monitoramento da saúde não pareça uma tarefa árdua, mas sim como ter alguém ao seu lado.</p>
+        </div>
+        <aside class="info-card reveal" aria-label="Nossa Missão">
+          <div class="mini-stat"><span class="k">Foco</span><span class="v">Saúde preventiva</span></div>
+          <div class="mini-stat"><span class="k">Abordagem</span><span class="v">Software + Hardware</span></div>
+          <div class="mini-stat"><span class="k">Apoiado por</span><span class="v">Vertex Corporation</span></div>
+          <div class="mini-stat"><span class="k">Status</span><span class="v">Alfa, iOS e Android</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section ring" id="ring">
+      <div class="wrap ring-grid">
+        <div class="ring-stage reveal">
+          <dotlottie-player id="ringplayer" src="/assets/animation/ring.lottie" background="transparent" speed="1" loop loading="lazy" aria-hidden="true"></dotlottie-player>
+        </div>
+        <div class="ring-copy reveal">
+          <div class="ring-title-row">
+            <h2>Ally Ring</h2>
+            <span class="badge-mini">PROTÓTIPO</span>
+          </div>
+          <p class="lead">Estamos unindo software e hardware. O Ally Ring foi projetado para ser silencioso, poderoso e invisível. Monitoramento contínuo da vida envolto em uma estética superior.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <h2>Nossos Outros Projetos</h2>
+          <p>Nossos produtos de IA, jogos e tecnologia de saúde desenvolvidos junto com a Vertex.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="card reveal">
+            <p class="eyebrow">ARQUITETURA DE IA</p>
+            <h3>Mergen</h3>
+            <p class="card-desc">Arquitetura de IA escalável para processamento de dados de alto desempenho e modelos de aprendizado de máquina.</p>
+          </article>
+          <article class="card reveal">
+            <p class="eyebrow">JOGO MOBILE</p>
+            <h3>All Star</h3>
+            <p class="card-desc">Nosso jogo mobile que alcançou mais de 5 milhões de pessoas e recebeu mais de 20.000 downloads em 48 horas.</p>
+          </article>
+          <article class="card reveal">
+            <p class="eyebrow">ASSISTENTE DE IA</p>
+            <h3>Cortex</h3>
+            <p class="card-desc">Seu núcleo de IA inteligente. Oferece desempenho incomparável com rastreamento em tempo real e uma política de zero dados.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="roadmap">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow accent">O que vem a seguir</p>
+          <h2>Nossa visão e roteiro</h2>
+          <p>O Ally foi projetado para ser mais do que apenas um aplicativo — um companheiro de estilo de vida. Aqui está o que nossa equipe está construindo a seguir.</p>
+        </div>
+        <div class="roadmap-grid">
+          <article class="card roadmap-card reveal">
+            <div class="card-visual"><lottie-player src="/assets/animation/leaderboard.json" background="transparent" speed="1" loop loading="lazy" aria-hidden="true"></lottie-player></div>
+            <div class="card-body">
+              <h3>Saúde gamificada</h3>
+              <p>Alcance seus objetivos, colecione troféus e suba na tabela de classificação — cuidar de si mesmo agora é divertido.</p>
+            </div>
+          </article>
+          <article class="card roadmap-card reveal">
+            <div class="card-visual"><lottie-player src="/assets/animation/graphic.json" background="transparent" speed="1" loop loading="lazy" aria-hidden="true"></lottie-player></div>
+            <div class="card-body">
+              <h3>Resumo Mensal</h3>
+              <p>Como retrospectivas anuais de música, mas para a sua saúde — insights mensais com gráficos simples e visuais.</p>
+            </div>
+          </article>
+          <article class="card roadmap-card reveal">
+            <div class="card-visual"><lottie-player src="/assets/animation/watch.json" background="transparent" speed="1" loop loading="lazy" aria-hidden="true"></lottie-player></div>
+            <div class="card-body">
+              <h3>Ecossistema vestível</h3>
+              <p>Além dos smartwatches padrão: integrações nativas para o Ally Ring e futuros acessórios.</p>
+            </div>
+          </article>
+          <article class="card roadmap-card reveal">
+            <div class="card-visual"><lottie-player src="/assets/animation/warning.json" background="transparent" speed="1" loop loading="lazy" aria-hidden="true"></lottie-player></div>
+            <div class="card-body">
+              <h3>Círculo de segurança inteligente</h3>
+              <p>Em uma emergência ou inatividade incomum, o Ally alerta automaticamente as pessoas em quem você confia.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="cta">
+      <div class="wrap">
+        <div class="cta-box reveal">
+          <h2>Um companheiro desde o primeiro dia.</h2>
+          <p>No momento, estamos construindo abertamente, na fase alfa. Vamos moldar juntos o que o Ally se tornará.</p>
+          <div class="cta-links">
+            <a class="btn btn-primary" href="https://testflight.apple.com/join/j6eV7uYZ" target="_blank" rel="noopener">Baixar para iOS</a>
+            <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.vertex.ally" target="_blank" rel="noopener">Baixar para Android</a>
+            <a class="btn btn-outline" href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">Ver no GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
     <div class="wrap">
-      <div class="stats reveal"><div class="stat"><div class="num">Alpha</div><div class="label">Fase de desenvolvimento</div></div><div class="stat"><div class="num">iOS & Android</div><div class="label">Plataformas nativas</div></div><div class="stat"><div class="num">24/7</div><div class="label">Análise em tempo real</div></div><div class="stat"><div class="num">Apache 2.0</div><div class="label">Licença open source</div></div></div>
-    </div>
-  </section>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/pt/" aria-label="Ally — Início">
+            <svg class="brand-mark" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><path d="M25 84 L48 12 L71 84" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8" fill="none" stroke="currentColor" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 5 L53 12 L48 19 L43 12 Z" fill="var(--accent)" stroke="none"/></svg>
+            <span class="brand-name">Ally</span>
+          </a>
+          <p class="footer-tagline">Sempre ao seu lado. Um ecossistema de saúde desenvolvido pela Vertex Corporation.</p>
+        </div>
 
-  <!-- ================= BUILT WITH ================= -->
-<section class="builtwith">
-  <div class="wrap">
-    <p class="builtwith-label">
-      Nossa infraestrutura e tecnologias são impulsionadas pelos melhores
-    </p>
-    <div class="builtwith-logos reveal">
-      <img src="/assets/partners/assemblyai.svg" alt="Assembly">
-      <img src="/assets/partners/cloudflare.svg" alt="Cloudflare">
-      <img src="/assets/partners/deepgram.jpeg" alt="Deepgram">
-      <img src="/assets/partners/fal.svg" alt="fal">
-      <img src="/assets/partners/gitlab.svg" alt="Gitlab">
-      <img src="/assets/partners/miro.svg" alt="Miro">
-    </div>
-  </div>
-</section>
+        <nav class="footer-col" aria-label="Produto">
+          <h4>Produto</h4>
+          <ul>
+            <li><a href="#ring">Ally Ring</a></li>
+            <li><a href="#roadmap">Roteiro</a></li>
+            <li><a href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </nav>
 
-<!-- ================= AMBITION ================= -->
-<section class="section" id="ambition">
-  <div class="wrap">
-    <div class="ambition-grid">
-      <div class="ambition-copy reveal">
-        <span class="eyebrow">Nossa Missão</span>
-        <h2 style="margin-bottom:22px;">
-          Milhões de mortes evitáveis ocorrem todos os anos. Nós nos recusamos a aceitar isso.
-        </h2>
-        <p>
-          <strong>A missão do Ally é simples, mas gigantesca:</strong> democratizar os dados de saúde, permitir o diagnóstico precoce e reduzir significativamente as taxas de mortalidade globais.
-        </p>
-        <p>
-          Combinamos software e hardware para construir um escudo em torno da humanidade &mdash; começando com um aplicativo que faz com que o monitoramento da saúde não pareça uma tarefa árdua, mas sim como ter alguém ao seu lado.
-        </p>
-      </div>
-      <div class="info-card reveal">
-        <div class="mini-stat"><span class="k">Foco</span><span class="v">Saúde preventiva</span></div>
-        <div class="mini-stat"><span class="k">Abordagem</span><span class="v">Software + Hardware</span></div>
-        <div class="mini-stat"><span class="k">Apoiado por</span><span class="v">Vertex Corporation</span></div>
-        <div class="mini-stat"><span class="k">Status</span><span class="v">Alfa, iOS e Android</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+        <nav class="footer-col" aria-label="Empresa">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="https://vertexishere.com" target="_blank" rel="noopener">Vertex Corporation</a></li>
+            <li><a href="https://vertexishere.com/en/join-us.html" target="_blank" rel="noopener">Junte-se à Vertex</a></li>
+            <li><a href="/privacy-policy.html">Política de Privacidade</a></li>
+          </ul>
+        </nav>
 
-<!-- ================= ALLY RING ================= -->
-<section class="ring-section" id="ring">
-  <div class="wrap">
-    <div class="ring-split">
-      <div class="ring-left reveal">
-        <dotlottie-player
-          id="ringplayer" 
-          src="/assets/animation/ring.lottie" 
-          background="transparent" 
-          speed="1" 
-          style="width: 100%; max-width: 360px; height: auto;"  
-          >
-        </dotlottie-player>
-      </div>
-      <div class="ring-right reveal" style="transition-delay: 0.15s;">
-        <div class="ring-title-row">
-          <h2>Ally Ring</h2>
-          <span class="badge-mini">PROTÓTIPO</span>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="mailto:contact@vertexishere.com">contact@vertexishere.com</a></li>
+            <li><a href="tel:+905511988191">+90 551 198 91 91</a></li>
+            <li>20 Wenlock Road, Londres, N1 7GU, Reino Unido</li>
+          </ul>
         </div>
-        <p class="lead2">
-          Estamos unindo software e hardware. O Ally Ring foi projetado para ser silencioso, poderoso e invisível. Monitoramento contínuo da vida envolto em uma estética superior.
-        </p>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ================= PROJECTS ================= -->
-<section class="section" id="projects">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <h2>Nossos Outros Projetos</h2>
-      <p>Nossos produtos de IA, jogos e tecnologia de saúde desenvolvidos junto com a Vertex.</p>
+      <div class="footer-bottom">
+        <span class="copyright">© 2026 Vertex Corporation Ltd. Ally é uma marca registrada da Vertex.</span>
+        <div class="legal">
+          <a href="/privacy-policy.html">Política de Privacidade</a>
+          <a href="https://vertexishere.com/terms-of-service.html" target="_blank" rel="noopener">Termos de Serviço</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/company/106897671/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.5c0-1.3-.02-3-1.86-3-1.87 0-2.15 1.4-2.15 2.9V21h-4V9z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vertex.23/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 2.02.24 2.5.42.62.24 1.07.53 1.54 1 .47.47.76.92 1 1.54.18.48.37 1.33.42 2.5.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 2.02-.42 2.5-.24.62-.53 1.07-1 1.54-.47.47-.92.76-1.54 1-.48.18-1.33.37-2.5.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-2.02-.24-2.5-.42-.62-.24-1.07-.53-1.54-1-.47-.47-.76-.92-1-1.54-.18-.48-.37-1.33-.42-2.5C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-2.02.42-2.5.24-.62.53-1.07 1-1.54.47-.47.92-.76 1.54-1 .48-.18 1.33-.37 2.5-.42C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5.01-4.74.07-.96.04-1.48.2-1.83.34-.46.18-.79.39-1.13.73-.34.34-.55.67-.73 1.13-.14.35-.3.87-.34 1.83C3.17 8.5 3.16 8.86 3.16 12s.01 3.5.07 4.74c.04.96.2 1.48.34 1.83.18.46.39.79.73 1.13.34.34.67.55 1.13.73.35.14.87.3 1.83.34 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.2 1.83-.34.46-.18.79-.39 1.13-.73.34-.34.55-.67.73-1.13.14-.35.3-.87.34-1.83.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.83-.18-.46-.39-.79-.73-1.13a3.02 3.02 0 0 0-1.13-.73c-.35-.14-.87-.3-1.83-.34C15.5 4.01 15.14 4 12 4zm0 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm0 1.8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm5.85-2a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0z"/></svg>
+          </a>
+          <a href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
-    
-    <div class="projects-grid reveal">
-      <a href="https://vertexishere.com/en/" target="_blank" rel="noopener" class="project-card-new">
-        <span class="eyebrow">ARQUITETURA DE IA</span>
-        <h3>Mergen</h3>
-        <p>
-          Arquitetura de IA escalável para processamento de dados de alto desempenho e modelos de aprendizado de máquina.
-        </p>
-      </a>
-      
-      <a href="https://play.google.com/store/apps/details?id=com.VertexGames.AllStar" target="_blank" rel="noopener" class="project-card-new">
-        <span class="eyebrow">JOGO MOBILE</span>
-        <h3>All Star</h3>
-        <p>
-          Nosso jogo mobile que alcançou mais de 5 milhões de pessoas e recebeu mais de 20.000 downloads em 48 horas.
-        </p>
-      </a>
-      
-      <a href="https://cortexishere.com" target="_blank" rel="noopener" class="project-card-new">
-        <span class="eyebrow">ASSISTENTE DE IA</span>
-        <h3>Cortex</h3>
-        <p>
-          Seu núcleo de IA inteligente. Oferece desempenho incomparável com rastreamento em tempo real e uma política de zero dados.
-        </p>
-      </a>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ================= ROADMAP ================= -->
-<section class="section" id="roadmap">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow accent">O que vem a seguir</span>
-      <h2>Nossa visão e roteiro</h2>
-      <p>O Ally foi projetado para ser mais do que apenas um aplicativo &mdash; um companheiro de estilo de vida. Aqui está o que nossa equipe está construindo a seguir.</p>
-    </div>
-    
-    <div class="roadmap-grid-new reveal">
-      
-      <div class="rmcard-new">
-        <div class="rmcard-visual">
-          <lottie-player src="/assets/animation/leaderboard.json" background="transparent" speed="1" loop  style="transform: scale(1.6);"></lottie-player>
-        </div>
-        <div class="rmcard-content">
-          <h3>Saúde gamificada</h3>
-          <p>Alcance seus objetivos, colecione troféus e suba na tabela de classificação &mdash; cuidar de si mesmo agora é divertido.</p>
-        </div>
-      </div>
-      
-      <div class="rmcard-new">
-        <div class="rmcard-visual">
-          <lottie-player src="/assets/animation/graphic.json" background="transparent" speed="1" loop ></lottie-player>
-        </div>
-        <div class="rmcard-content">
-          <h3>Resumo Mensal</h3>
-          <p>Como retrospectivas anuais de música, mas para a sua saúde &mdash; insights mensais com gráficos simples e visuais.</p>
-        </div>
-      </div>
-      
-      <div class="rmcard-new">
-        <div class="rmcard-visual">
-          <lottie-player src="/assets/animation/watch.json" background="transparent" speed="1" loop ></lottie-player>
-        </div>
-        <div class="rmcard-content">
-          <h3>Ecossistema vestível</h3>
-          <p>Além dos smartwatches padrão: integrações nativas para o Ally Ring e futuros acessórios.</p>
-        </div>
-      </div>
-      
-      <div class="rmcard-new">
-        <div class="rmcard-visual">
-          <lottie-player src="/assets/animation/warning.json" background="transparent" speed="1" loop ></lottie-player>
-        </div>
-        <div class="rmcard-content">
-          <h3>Círculo de segurança inteligente</h3>
-          <p>Em uma emergência ou inatividade incomum, o Ally alerta automaticamente as pessoas em quem você confia.</p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<!-- ================= CTA ================= -->
-<section class="cta-section" id="cta">
-  <div class="wrap">
-    <div class="cta-box reveal">
-      <h2>Um companheiro desde o primeiro dia.</h2>
-      <p>No momento, estamos construindo abertamente, na fase alfa. Vamos moldar juntos o que o Ally se tornará.</p>
-      <div class="cta-links">
-        <a class="btn btn-solid" href="https://testflight.apple.com/join/j6eV7uYZ" target="_blank" rel="noopener">Baixar para iOS</a>
-        <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.vertex.ally" target="_blank" rel="noopener">Baixar para Android</a>
-        <a class="btn btn-outline" href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">Ver no GitHub</a>
-      </div>
-    </div>
-  </div>
-</section>
-  </main>`
-
-<!-- ================= FOOTER ================= -->
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="brand">
-          <svg viewBox="0 0 96 96" aria-hidden="true" focusable="false"><path d="M25 84 L48 12 L71 84" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8" fill="none" stroke="currentColor" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 5 L53 12 L48 19 L43 12 Z" fill="var(--accent)" stroke="none"/></svg>
-          <span>Ally</span>
-          <span class="byvertex">Por Vertex</span>
-        </div>
-        <p>Sempre ao seu lado. Um ecossistema de saúde desenvolvido pela Vertex Corporation.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Produto</h4>
-        <ul>
-          <li><a href="#ring">Ally Ring</a></li>
-          <li><a href="#roadmap">Roteiro</a></li>
-          <li><a href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener">GitHub</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Empresa</h4>
-        <ul>
-          <li><a href="https://vertexishere.com" target="_blank" rel="noopener">Vertex Corporation</a></li>
-          <li><a href="https://vertexishere.com/en/join-us.html" target="_blank" rel="noopener">Junte-se à Vertex</a></li>
-          <li><a href="https://allyishere.com/privacy-policy">Política de Privacidade</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <ul>
-          <li><a href="mailto:contact@vertexishere.com">contact@vertexishere.com</a></li>
-          <li><a href="tel:+905511988191">+90 551 198 91 91</a></li>
-          <li>20 Wenlock Road, Londres, N1 7GU, Reino Unido</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Vertex Corporation Ltd. Ally é uma marca registrada da Vertex.</span>
-      <div class="legal">
-        <a href="https://allyishere.com/privacy-policy">Política de Privacidade</a>
-        <a href="https://vertexishere.com/terms-of-service.html" target="_blank" rel="noopener">Termos de Serviço</a>
-      </div>
-      <div class="socials">
-        <a href="https://www.linkedin.com/company/106897671/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.5c0-1.3-.02-3-1.86-3-1.87 0-2.15 1.4-2.15 2.9V21h-4V9z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/vertex.23/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 2.02.24 2.5.42.62.24 1.07.53 1.54 1 .47.47.76.92 1 1.54.18.48.37 1.33.42 2.5.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 2.02-.42 2.5-.24.62-.53 1.07-1 1.54-.47.47-.92.76-1.54 1-.48.18-1.33.37-2.5.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-2.02-.24-2.5-.42-.62-.24-1.07-.53-1.54-1-.47-.47-.76-.92-1-1.54-.18-.48-.37-1.33-.42-2.5C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-2.02.42-2.5.24-.62.53-1.07 1-1.54.47-.47.92-.76 1.54-1 .48-.18 1.33-.37 2.5-.42C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5.01-4.74.07-.96.04-1.48.2-1.83.34-.46.18-.79.39-1.13.73-.34.34-.55.67-.73 1.13-.14.35-.3.87-.34 1.83C3.17 8.5 3.16 8.86 3.16 12s.01 3.5.07 4.74c.04.96.2 1.48.34 1.83.18.46.39.79.73 1.13.34.34.67.55 1.13.73.35.14.87.3 1.83.34 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.2 1.83-.34.46-.18.79-.39 1.13-.73.34-.34.55-.67.73-1.13.14-.35.3-.87.34-1.83.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.83-.18-.46-.39-.79-.73-1.13a3.02 3.02 0 0 0-1.13-.73c-.35-.14-.87-.3-1.83-.34C15.5 4.01 15.14 4 12 4zm0 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm0 1.8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm5.85-2a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0z"/></svg>
-        </a>
-        <a href="https://github.com/VertexCorporation/Ally" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="/main.js" defer></script>
+  <script src="/main.js" defer></script>
 </body>
 </html>
+

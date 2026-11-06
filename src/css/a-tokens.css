@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Ally design system — one visual language for every locale.
+   Vertex Corporation · cool neutrals + Ally blue · dark-first
+   Sections: tokens · scripts · base · type/layout · header · controls · hero
+             · sections · cards · cta · footer · motion · utility · responsive
+   ========================================================================== */
+
+/* ----------------------------- 1. Design tokens -------------------------- */
+:root {
+  --bg: #F7F9FB;
+  --surface: #FFFFFF;
+  --surface-2: #EEF2F7;
+  --text: #10151B;
+  --text-muted: #55606D;
+  --text-faint: #8B96A3;
+  --border: #E1E7EF;
+  --border-strong: #C9D3E0;
+  --hover: #EEF2F7;
+  --action: #12161D;
+  --action-hover: #2A313B;
+  --action-ink: #F7F9FB;
+  --accent: #155EE0;
+  --accent-ink: #FFFFFF;
+  --focus: #155EE0;
+  --header-bg: rgba(247, 249, 251, .72);
+  --shadow-menu: 0 16px 40px rgba(9, 20, 38, .14);
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-head: "Poppins", "Inter", system-ui, sans-serif;
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --display-weight: 400;
+  --display-transform: uppercase;
+  --display-tracking: .045em;
+  --display-leading: .98;
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-pill: 999px;
+  --maxw: 1120px;
+  --gutter: clamp(20px, 5vw, 32px);
+  --nav-h: 64px;
+  --dur-fast: 140ms;
+  --dur: 200ms;
+  --dur-slow: 600ms;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --float-rise: -2px;
+  --float-amp: 1.4px;
+  --float-dur: 3.4s;
+  --float-rise-sm: -1px;
+  --float-amp-sm: .8px;
+  --z-nav: 100;
+  --z-skip: 200;
+}
+
+html[data-theme="dark"] {
+  --bg: #0E1116;
+  --surface: #151A21;
+  --surface-2: #1B222B;
+  --text: #EDF1F7;
+  --text-muted: #98A3B1;
+  --text-faint: #6B7684;
+  --border: #232C37;
+  --border-strong: #34404E;
+  --hover: #1E2630;
+  --action: #EDF1F7;
+  --action-hover: #FFFFFF;
+  --action-ink: #0E1116;
+  --accent: #6EA8FF;
+  --focus: #6EA8FF;
+  --header-bg: rgba(14, 17, 22, .72);
+  --shadow-menu: 0 16px 40px rgba(0, 0, 0, .5);
+}

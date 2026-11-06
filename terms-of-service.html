@@ -1,35 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Terms of Service | Ally by Vertex</title>
-  <meta name="description" content="Terms of Service for Ally. Usage rules and medical disclaimers." />
-  <meta name="robots" content="noindex, follow" />
+  <title>Terms of Service | Ally</title>
+  <meta name="description" content="Terms of Service for Ally. Usage rules and medical disclaimers.">
+  <meta name="robots" content="noindex, follow">
 
-  <!-- Theme Color -->
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafaf7" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0c" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7F9FB">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="main.css" />
-  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="/main.css">
   <script>
     try {
-      var t = localStorage.getItem("ally-theme") || localStorage.getItem("theme") || "dark";
+      var t = localStorage.getItem("ally-theme");
+      if (t !== "light" && t !== "dark") t = "dark";
       document.documentElement.setAttribute("data-theme", t);
     } catch (e) {}
   </script>
@@ -38,21 +31,30 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Theme toggle -->
-  <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle theme">
-    <div class="theme-icon" aria-hidden="true"></div>
-  </button>
+  <header class="site-header" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/en/" aria-label="Ally — home">
+        <svg class="brand-mark" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><path d="M25 84 L48 12 L71 84" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.2 56 H43 L48.8 40 L54.5 68 L57.6 56 H61.8" fill="none" stroke="currentColor" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 5 L53 12 L48 19 L43 12 Z" fill="var(--accent)" stroke="none"/></svg>
+        <span class="brand-name">Ally</span>
+        <span class="brand-by">By Vertex</span>
+      </a>
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-sm" href="/en/">allyishere.com</a>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="M20.2 13.6A8.4 8.4 0 0 1 10.4 3.8a8.4 8.4 0 1 0 9.8 9.8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-  <main class="page policy-page" id="main">
-
-    <!-- Content Container -->
-    <div class="container text-container reveal delay-1">
-
-      <header class="policy-header">
+  <main id="main">
+    <div class="policy-main">
+      <header>
         <h1>Ally Terms of Service</h1>
         <p class="last-updated">Last Updated: December 24, 2025</p>
-        <div class="divider"></div>
       </header>
+
 
       <!-- INTRO & ALPHA NOTICE -->
       <section class="policy-section">
@@ -63,7 +65,7 @@
         </p>
 
         <!-- ALPHA NOTICE BOX -->
-        <div class="alpha-notice">
+        <div class="notice">
           <strong>Alpha Phase Notice</strong>
           <p> Ally is currently in an active Alpha development phase. The Service is provided "as is" and may contain
             bugs, errors, or incomplete features. By using Ally during this phase, you acknowledge that data accuracy
@@ -77,15 +79,15 @@
       </section>
 
       <!-- SECTION 1: MEDICAL DISCLAIMER (EN ÖNEMLİ KISIM) -->
-      <section class="policy-section highlight-section">
-        <div class="disclaimer-box" style="margin-top: 0; margin-bottom: 20px;">
+      <section class="policy-section">
+        <div class="notice warn">
           <strong>1. ABSOLUTELY NO MEDICAL ADVICE</strong>
           <p>
             Ally is NOT a medical device, and Vertex is NOT a healthcare provider.
             The Service, including all data, AI analysis, notifications, and "Lifeline" features, is provided for
             general informational and fitness purposes only.
           </p>
-          <ul style="margin-top: 10px; margin-bottom: 0;">
+          <ul class="policy-list">
             <li><strong>Do not</strong> use Ally to diagnose, treat, cure, monitor, or prevent any disease or medical
               condition.</li>
             <li><strong>Do not</strong> change your medication, sleep habits, or treatment plan based on data from Ally
@@ -236,14 +238,11 @@
         </p>
       </section>
 
-      <footer class="footer">
-        <p>&copy; Vertex, Ally is a trademark of Vertex.</p>
-      </footer>
-
+      <p class="last-updated">&copy; Vertex, Ally is a trademark of Vertex.</p>
     </div>
   </main>
 
-  <script src="main.js" defer></script>
+  <script src="/main.js" defer></script>
 </body>
 
 </html>

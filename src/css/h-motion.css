@@ -1,0 +1,194 @@
+
+/* ----------------------------- 13. Motion -------------------------------- */
+/* Hover motion system — one interaction model for every interactive element:
+   REST clean and stable → HOVER subtle highlight + slight lift →
+   SUSTAINED HOVER very subtle floating → LEAVE smooth return to rest.
+   The float starts after the lift transition completes (same baseline), so the
+   hand-off is seamless; on leave the transition returns from the current frame. */
+@keyframes ally-float {
+  0%, 100% { transform: translateY(var(--float-rise)); }
+  50% { transform: translateY(calc(var(--float-rise) - var(--float-amp))); }
+}
+@keyframes ally-float-sm {
+  0%, 100% { transform: translateY(var(--float-rise-sm)); }
+  50% { transform: translateY(calc(var(--float-rise-sm) - var(--float-amp-sm))); }
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.btn:hover,
+.btn:focus-visible,
+.store-badge:hover,
+.store-badge:focus-visible {
+  transform: translateY(var(--float-rise));
+  animation: ally-float var(--float-dur) var(--ease) var(--dur) infinite;
+}
+.lang-btn:hover,
+.lang-btn:focus-visible,
+.icon-btn:hover,
+.icon-btn:focus-visible {
+  transform: translateY(var(--float-rise-sm));
+  animation: ally-float-sm var(--float-dur) var(--ease) var(--dur) infinite;
+}
+
+/* Reveal-on-scroll is opt-in: without JS everything is visible. */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+}
+html.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero words: pure CSS, safe without JS (hidden state only where animations run). */
+@supports (animation-name: word-in) {
+  .hero .story-title .word {
+    opacity: 0;
+    transform: translateY(.35em);
+    animation: word-in .7s var(--ease) forwards;
+  }
+  .hero .story-title .word:nth-child(1) { animation-delay: .08s; }
+  .hero .story-title .word:nth-child(2) { animation-delay: .19s; }
+  .hero .story-title .word:nth-child(3) { animation-delay: .3s; }
+  .hero .story-title .word:nth-child(4) { animation-delay: .41s; }
+  .hero .story-title .word:nth-child(5) { animation-delay: .52s; }
+  .hero .story-title .word:nth-child(6) { animation-delay: .63s; }
+  .hero .story-title .word:nth-child(7) { animation-delay: .74s; }
+  .hero .story-title .word:nth-child(n+8) { animation-delay: .85s; }
+}
+
+@keyframes word-in {
+  from { opacity: 0; transform: translateY(.35em); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  /* Hover keeps its static highlight; no lift, no float. */
+  .nav-links a:hover,
+  .nav-links a:focus-visible,
+  .btn:hover,
+  .btn:focus-visible,
+  .store-badge:hover,
+  .store-badge:focus-visible,
+  .lang-btn:hover,
+  .lang-btn:focus-visible,
+  .icon-btn:hover,
+  .icon-btn:focus-visible {
+    animation: none !important;
+    transform: none !important;
+  }
+  .hero .story-title .word {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  html.js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ----------------------------- 14. Utility pages ------------------------- */
+.policy-main {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-top: calc(var(--nav-h) + clamp(40px, 7vh, 72px));
+  padding-bottom: clamp(56px, 8vw, 96px);
+}
+.policy-main h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+.last-updated {
+  color: var(--text-faint);
+  font-size: .85rem;
+  margin: 0 0 clamp(32px, 5vw, 48px);
+}
+.policy-section { margin-bottom: clamp(40px, 6vw, 64px); }
+.policy-section h2 {
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+.policy-section h3 {
+  font-size: 1.05rem;
+  margin: 28px 0 10px;
+}
+.policy-section p,
+.policy-section li {
+  color: var(--text-muted);
+  font-size: .97rem;
+}
+.policy-section p { margin: 0 0 14px; }
+.policy-section ul {
+  margin: 0 0 16px;
+  padding-inline-start: 22px;
+  list-style: disc;
+}
+.policy-list { margin-top: 10px; margin-bottom: 0; }
+.policy-section li { margin-bottom: 8px; }
+.policy-section a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.policy-section a:hover { text-decoration: none; }
+.notice {
+  margin: 22px 0;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid var(--accent);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: .93rem;
+}
+.notice strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: .8rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.notice.warn { border-inline-start-color: #C2482F; }
+.notice.warn strong { color: #C2482F; }
+
+/* 404 ---------------------------------------------------------------------- */
+.nf-main {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  gap: 18px;
+  padding: calc(var(--nav-h) + 40px) var(--gutter) 48px;
+  text-align: center;
+}
+.nf-main .brand-mark { width: 48px; height: 48px; margin-inline: auto; color: var(--text); }
+.nf-code {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  text-transform: var(--display-transform);
+  letter-spacing: var(--display-tracking);
+  font-size: clamp(84px, 17vw, 160px);
+  line-height: 1;
+  margin: 0;
+  color: var(--text);
+}
+.nf-main p {
+  max-width: 44ch;
+  margin: 0 auto 12px;
+  color: var(--text-muted);
+}

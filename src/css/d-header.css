@@ -1,0 +1,233 @@
+
+/* ----------------------------- 4. Header & navigation -------------------- */
+.site-header {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: var(--z-nav);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.site-header.scrolled {
+  background: var(--header-bg);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom-color: var(--border);
+}
+.nav-inner {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav-inner > :first-child { margin-inline-end: auto; }
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.15rem;
+  white-space: nowrap;
+}
+.brand-mark { width: 24px; height: 24px; flex: none; }
+.brand-by {
+  font-family: var(--font-body);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 6px;
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.8vw, 22px);
+}
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: var(--radius-s);
+  font-size: .93rem;
+  font-weight: 500;
+  color: var(--text);
+  transition:
+    color var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease),
+    transform var(--dur) var(--ease);
+}
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--text);
+  background: var(--hover);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+
+/* Language menu ----------------------------------------------------------- */
+.lang-wrap { position: relative; flex: none; }
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease),
+    transform var(--dur) var(--ease);
+}
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  background: var(--hover);
+  border-color: var(--text-muted);
+}
+.lang-btn svg { width: 15px; height: 15px; flex: none; }
+.lang-btn .chev { width: 10px; height: 10px; transition: transform var(--dur-fast) var(--ease); }
+.lang-wrap.open .chev { transform: rotate(180deg); }
+
+.lang-menu {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 8px);
+  min-width: 200px;
+  max-height: min(440px, calc(100vh - 110px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-menu);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+.lang-menu::-webkit-scrollbar { width: 6px; }
+.lang-menu::-webkit-scrollbar-track { background: transparent; }
+.lang-menu::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--radius-pill);
+}
+.lang-wrap.open .lang-menu { display: flex; }
+.lang-menu a {
+  /* flex:none — entries must never compress when the list overflows;
+     the container scrolls instead (prevents clipped/overlapping names). */
+  flex: none;
+  display: block;
+  padding: 9px 14px;
+  border-radius: var(--radius-s);
+  font-size: .87rem;
+  line-height: 1.45;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lang-menu a:hover { background: var(--hover); }
+.lang-menu a:focus-visible { background: var(--hover); }
+.lang-menu a[aria-current="true"] {
+  font-weight: 700;
+  background: var(--surface-2);
+}
+.lang-menu a[aria-current="true"]::after { content: " ✓"; color: var(--accent); }
+
+/* Theme + hamburger -------------------------------------------------------- */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  cursor: pointer;
+  transition:
+    border-color var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease),
+    transform var(--dur) var(--ease);
+}
+.icon-btn:hover,
+.icon-btn:focus-visible {
+  background: var(--hover);
+  border-color: var(--text-muted);
+}
+.icon-btn svg { width: 16px; height: 16px; }
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+html[data-theme="dark"] .icon-sun { display: block; }
+html[data-theme="dark"] .icon-moon { display: none; }
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  cursor: pointer;
+}
+.hamburger span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 2px;
+  background: var(--text);
+  transform: translate(-50%, -50%) translateY(-3.5px);
+  transition: transform var(--dur-fast) var(--ease);
+}
+.hamburger span:last-child { transform: translate(-50%, -50%) translateY(3.5px); }
+.hamburger[aria-expanded="true"] span:first-child { transform: translate(-50%, -50%) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:last-child { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.mobile-menu {
+  position: fixed;
+  inset: var(--nav-h) 0 0 0;
+  z-index: calc(var(--z-nav) - 1);
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  padding: 20px var(--gutter) 32px;
+  background: var(--bg);
+  overflow-y: auto;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a:not(.btn) {
+  padding: 15px 2px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu .btn { margin-top: 20px; width: 100%; }

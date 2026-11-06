@@ -1,0 +1,188 @@
+
+/* ----------------------------- 5. Buttons & store badges ----------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-s);
+  background: transparent;
+  color: var(--text);
+  font-size: .92rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease),
+    opacity var(--dur-fast) var(--ease),
+    transform var(--dur) var(--ease);
+}
+.btn:hover { background: var(--hover); border-color: var(--text-muted); }
+.btn-primary {
+  background: var(--action);
+  border-color: transparent;
+  color: var(--action-ink);
+}
+.btn-primary:hover { background: var(--action-hover); border-color: transparent; }
+.btn-sm { min-height: 36px; padding: 6px 14px; font-size: .84rem; }
+.btn svg { width: 16px; height: 16px; flex: none; }
+
+.store-badge {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 9px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-m);
+  background: transparent;
+  color: var(--text);
+  text-align: start;
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    transform var(--dur) var(--ease);
+}
+.store-badge:hover { background: var(--hover); border-color: var(--text-muted); }
+.store-badge > svg {
+  width: 24px;
+  height: 24px;
+  justify-self: center;
+}
+.store-badge .stack {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.store-badge small {
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+.store-badge strong {
+  font-size: .92rem;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* ----------------------------- 6. Hero ----------------------------------- */
+.hero {
+  position: relative;
+  padding: calc(var(--nav-h) + clamp(56px, 9vh, 96px)) 0 clamp(48px, 7vw, 80px);
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 52%),
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: auto, 72px 72px, 72px 72px;
+  opacity: .35;
+  -webkit-mask-image: radial-gradient(720px 420px at 50% 0%, #000, transparent 78%);
+  mask-image: radial-gradient(720px 420px at 50% 0%, #000, transparent 78%);
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+.story-sub {
+  max-width: 56ch;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.6vw, 1.09rem);
+  line-height: 1.7;
+  text-wrap: balance;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 10px;
+}
+.hero-github { min-height: 56px; }
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 880px;
+  margin: clamp(44px, 7vw, 72px) auto 0;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+}
+.stat {
+  margin: 0;
+  padding: 20px 14px;
+  background: var(--surface);
+  text-align: center;
+}
+.stat dt {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin: 0 0 6px;
+  overflow-wrap: anywhere;
+}
+.stat dd {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.9vw, 1.3rem);
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+/* ----------------------------- 7. Built with ----------------------------- */
+.builtwith { padding: clamp(40px, 6vw, 64px) 0 8px; }
+.builtwith-label {
+  margin: 0 0 26px;
+  text-align: center;
+  color: var(--text-faint);
+  font-size: .9rem;
+}
+.builtwith-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 5vw, 52px);
+  max-width: 880px;
+  margin-inline: auto;
+}
+.builtwith-logos img {
+  height: 20px;
+  width: auto;
+  opacity: .55;
+  filter: grayscale(1);
+  transition: opacity var(--dur) var(--ease);
+}
+.builtwith-logos img:hover { opacity: .85; }
+html[data-theme="dark"] .builtwith-logos img {
+  filter: grayscale(1) invert(1);
+  opacity: .6;
+}

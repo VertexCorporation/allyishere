@@ -1,0 +1,99 @@
+
+/* ----------------------------- 2. Base ----------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+ul { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; }
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: 16px;
+  top: -56px;
+  z-index: var(--z-skip);
+  padding: 10px 16px;
+  background: var(--action);
+  color: var(--action-ink);
+  border-radius: 0 0 var(--radius-s) var(--radius-s);
+  font-weight: 600;
+  font-size: .85rem;
+  transition: top var(--dur-fast) var(--ease);
+}
+.skip-link:focus-visible { top: 0; }
+
+/* ----------------------------- 3. Typography & layout -------------------- */
+h1, h2, h3, h4 { margin: 0; color: var(--text); }
+h2, h3, h4 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.015em;
+}
+
+.story-title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  text-transform: var(--display-transform);
+  letter-spacing: var(--display-tracking);
+  line-height: var(--display-leading);
+  font-size: clamp(2.35rem, 6.4vw, 4.6rem);
+  max-width: 18ch;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+}
+.story-title .word { display: inline-block; }
+.story-title .word + .word { margin-inline-start: .24em; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { padding: clamp(72px, 9vw, 112px) 0; }
+section[id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
+
+.eyebrow {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin: 0 0 14px;
+}
+.eyebrow.accent { color: var(--accent); }
+
+.section-head { max-width: 620px; margin-bottom: clamp(36px, 5vw, 56px); }
+.section-head.center { margin-inline: auto; text-align: center; }
+.section-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); margin-bottom: 12px; }
+.section-head p { color: var(--text-muted); margin: 0; }

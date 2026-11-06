@@ -1,0 +1,57 @@
+
+/* Script support: same hierarchy, different rendering stacks.
+   Only changes where the script requires it. */
+html[lang="ar"] {
+  --font-body: "Segoe UI", "Geeza Pro", "Noto Sans Arabic", system-ui, sans-serif;
+  --font-head: "Segoe UI", "Geeza Pro", "Noto Sans Arabic", system-ui, sans-serif;
+  --font-display: "Segoe UI", "Geeza Pro", "Noto Sans Arabic", system-ui, sans-serif;
+  --display-weight: 700;
+  --display-transform: none;
+  --display-tracking: 0;
+  --display-leading: 1.35;
+}
+html[lang="hi"] {
+  --font-body: "Noto Sans Devanagari", "Nirmala UI", "Devanagari Sangam MN", system-ui, sans-serif;
+  --font-head: "Noto Sans Devanagari", "Nirmala UI", "Devanagari Sangam MN", system-ui, sans-serif;
+  --font-display: "Noto Sans Devanagari", "Nirmala UI", "Devanagari Sangam MN", system-ui, sans-serif;
+  --display-weight: 800;
+  --display-transform: none;
+  --display-tracking: 0;
+  --display-leading: 1.3;
+}
+html[lang="ja"] {
+  --font-body: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", system-ui, sans-serif;
+  --font-head: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", system-ui, sans-serif;
+  --font-display: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", system-ui, sans-serif;
+  --display-weight: 700;
+  --display-transform: none;
+  --display-tracking: .02em;
+  --display-leading: 1.22;
+}
+html[lang="ko"] {
+  --font-body: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", system-ui, sans-serif;
+  --font-head: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", system-ui, sans-serif;
+  --font-display: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", system-ui, sans-serif;
+  --display-weight: 700;
+  --display-transform: none;
+  --display-tracking: .01em;
+  --display-leading: 1.22;
+}
+html[lang="zh"] {
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-head: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-display: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --display-weight: 700;
+  --display-transform: none;
+  --display-tracking: .02em;
+  --display-leading: 1.22;
+}
+/* Cyrillic / schwa: Anton has no coverage — use the body stack instead. */
+html[lang="ru"],
+html[lang="az"] {
+  --font-display: var(--font-body);
+  --display-weight: 800;
+  --display-transform: none;
+  --display-tracking: 0;
+  --display-leading: 1.04;
+}

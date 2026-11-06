@@ -1,0 +1,139 @@
+
+/* ----------------------------- 10. Cards --------------------------------- */
+.card {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  padding: 26px 24px;
+  transition: border-color var(--dur) var(--ease);
+}
+.card:hover { border-color: var(--border-strong); }
+.card .eyebrow { margin-bottom: 12px; }
+.card h3 { font-size: 1.18rem; margin-bottom: 10px; }
+.card-desc {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: .93rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1060px;
+  margin-inline: auto;
+}
+.roadmap-card { padding: 0; overflow: hidden; }
+.card-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  padding: 18px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+.card-visual lottie-player { width: 110px; height: 110px; }
+.card-body { padding: 20px 20px 24px; }
+.card-body h3 { font-size: 1.02rem; margin-bottom: 8px; }
+.card-body p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: .88rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* ----------------------------- 11. CTA ----------------------------------- */
+.cta-box {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(36px, 6vw, 64px) clamp(20px, 4vw, 48px);
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius-l) + 8px);
+  background:
+    radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 58%),
+    var(--surface);
+}
+.cta-box h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+.cta-box > p {
+  max-width: 52ch;
+  margin: 0 auto 30px;
+  color: var(--text-muted);
+}
+.cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ----------------------------- 12. Footer -------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: clamp(44px, 6vw, 72px) 0 28px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 48px);
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+.footer-brand .brand { margin-bottom: 12px; font-size: 1.05rem; }
+.footer-tagline {
+  max-width: 30ch;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: .9rem;
+}
+.footer-col h4 {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 14px;
+}
+.footer-col li { margin-bottom: 10px; }
+.footer-col li:last-child { margin-bottom: 0; }
+.footer-col a {
+  color: var(--text-muted);
+  font-size: .9rem;
+  overflow-wrap: anywhere;
+  transition: color var(--dur-fast) var(--ease);
+}
+.footer-col a:hover { color: var(--text); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: .8rem;
+}
+.footer-bottom .legal { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.footer-bottom .legal a { color: var(--text-faint); }
+.footer-bottom .legal a:hover { color: var(--text); }
+.footer-bottom .socials { display: flex; gap: 12px; }
+.footer-bottom .socials svg { width: 17px; height: 17px; color: var(--text-faint); }
+.footer-bottom .socials a:hover svg { color: var(--text); }
